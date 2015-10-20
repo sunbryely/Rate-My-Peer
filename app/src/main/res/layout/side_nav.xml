@@ -8,14 +8,24 @@
     <RelativeLayout
         android:id="@+id/mainContent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="SIDE NAV PAGE"
+            android:id="@+id/textView3"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
 
     <!-- The navigation drawer -->
     <RelativeLayout
         android:layout_width="280dp"
         android:layout_height="match_parent"
         android:id="@+id/drawerPane"
-        android:layout_gravity="start">
+        android:layout_gravity="end">
 
         <!-- Profile Box -->
 
