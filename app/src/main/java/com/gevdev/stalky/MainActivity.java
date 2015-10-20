@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -18,6 +19,8 @@ import com.facebook.login.widget.LoginButton;
 
 public class MainActivity extends Activity {
 
+    public final static String EXTRA_MESSAGE = "com.gevdev.Stalky.MESSAGE";
+
     private TextView info;
     private LoginButton loginButton;
     private CallbackManager callbackManager;
@@ -25,6 +28,7 @@ public class MainActivity extends Activity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
 
         FacebookSdk.sdkInitialize(this.getApplicationContext());
@@ -41,10 +45,13 @@ public class MainActivity extends Activity {
                     @Override
                     public void onSuccess(LoginResult loginResult) {
                         // App code
-                        info.setText(
+                        /*info.setText(
                                 "User ID: " + loginResult.getAccessToken().getUserId()
                                         + "\n" + "Auth Token: " + loginResult.getAccessToken().getToken()
-                        );
+                        );*/
+
+                        onLogin();
+
                     }
 
                     @Override
@@ -57,7 +64,8 @@ public class MainActivity extends Activity {
                     @Override
                     public void onError(FacebookException e) {
                         // App code
-                        info.setText("Login Attempt failed due to an error" + e.toString());
+                        info.setText("Login Attempt failed due to an error " + e.toString() +
+                                     ". WHY WON'T ANYONE HELP ME");
                     }
                 });
     }
@@ -76,21 +84,21 @@ public class MainActivity extends Activity {
         return true;
     }
 
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//
-//        // Logs 'install' and 'app activate' App Events.
-//        AppEventsLogger.activateApp(this);
-//    }
-//
-//    @Override
-//    protected void onPause() {
-//        super.onPause();
-//
-//        // Logs 'app deactivate' App Event.
-//        AppEventsLogger.deactivateApp(this);
-//    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        // Logs 'install' and 'app activate' App Events.
+        AppEventsLogger.activateApp(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        // Logs 'app deactivate' App Event.
+        AppEventsLogger.deactivateApp(this);
+    }
 
 
 
@@ -109,4 +117,25 @@ public class MainActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+    /*
+        This method will execute some actions as the MainActivity loads
+
+        If a user is logged in, create a new Intent and switch to the the user search activity
+        which will be where users can search for people to rate.
+
+        If a user is not logged in, just let the user login, and the callback from the FB
+        login function will be used to move to the search activity.
+     */
+    private void onLogin()
+    {
+
+
+        Intent intent = new Intent(this, UserSearch.class);
+        startActivity(intent);
+    }
+
+
 }
+
