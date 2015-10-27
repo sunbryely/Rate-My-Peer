@@ -20,16 +20,28 @@
             android:layout_gravity="center"
             android:src="@drawable/user_profile"
         />
-
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sherry Chen"
-            android:textSize="25dp"
+            android:textSize="28dp"
             android:layout_gravity="center"
-            android:layout_margin="50dp"
+            android:layout_margin="20dp"
             android:id="@+id/profile_name"
            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rate_btn"
+            android:text="rate"
+            android:textSize="22dp"
+            android:layout_gravity="center"
+            />
+        </LinearLayout>
     </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
