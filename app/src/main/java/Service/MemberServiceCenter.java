@@ -1,5 +1,6 @@
 package Service;
 
+import android.content.Context;
 import android.util.Log;
 
 import com.android.volley.Request;
@@ -13,6 +14,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.net.URL;
+import java.util.logging.Handler;
 import java.util.logging.Logger;
 
 import bean.User;
@@ -27,24 +30,20 @@ public class MemberServiceCenter {
      */
     private static final String TAG = "ViewPeopleFragment";
     private static RequestQueue requestQueue;
-    public static void getSearchedUserInfo(String searched_id) {
+    private static MemberServiceCenter center;
+    private static Context mCtx;
+    //public static boolean isFinished = false;
+    private MemberServiceCenter(Context context) {
+        mCtx = context;
+        requestQueue = Volley.newRequestQueue(context.getApplicationContext());
+    }
+    public static MemberServiceCenter getInstance(Context context) {
+        if (center == null) center = new MemberServiceCenter(context);
+        return center;
+    }
+    public void getSearchedUserInfo(String searched_id, Handler handler) {
 
-
-       /* User result = null;
-        String uri = String.format("/users/%s", searched_id);
-        HttpResponse response = ServiceCenter.get(uri);
-        if(response != null && response.getStatusLine().getStatusCode() == 200) {
-            String resp = ResponseHelper.parseString(response);
-            try {
-                JSONObject obj = new JSONObject(resp);
-                result = User.fromJson(obj);
-            }catch(Exception e){
-                Log.e("GetInfoErr",""+ e);
-            }
-        }
-        return result;
-    }*/
-        String URL = String.format("/users/%s", searched_id);
+        String URL= String.format("/users/%s", searched_id);
         JsonObjectRequest jsonRequest = new JsonObjectRequest
                 (Request.Method.GET, URL, null, new Response.Listener<JSONObject>() {
                     @Override
@@ -53,15 +52,20 @@ public class MemberServiceCenter {
 
 
                         try {
+                            //User user;
                             JSONArray jArray = jsonObject.getJSONArray("searched_id");
                             Log.e(TAG, "contacts = " + jArray.toString());
                             JSONObject obj = jsonObject.getJSONObject("");
+                            //String id = dfkls
+                            //user.setUserId(id);
+
 
                         } catch (JSONException e) {
                             Log.e(TAG, "error");
                             e.printStackTrace();
 
                         }
+                        //isFinished = true;
                     }
                 }, new Response.ErrorListener() {
                     @Override
@@ -70,7 +74,11 @@ public class MemberServiceCenter {
                     }
 
                 });
-        requestQueue = Volley.newRequestQueue(this); // Parameter for
-        requestQueue.add(jsonRequest);               // newRequestQueue is a Context
+
+            requestQueue.add(jsonRequest);
+            //isFinished = false;
+        //while(!isFinished);
+
+
     }
 }

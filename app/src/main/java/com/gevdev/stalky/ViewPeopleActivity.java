@@ -1,5 +1,7 @@
 package com.gevdev.stalky;
 
+import android.app.Activity;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -19,7 +21,7 @@ import bean.User;
  * @author Sherry
  */
 
-public class ViewPeopleFragment extends Fragment {
+public class ViewPeopleActivity extends Activity {
     private TextView friendliness;
     private TextView skills;
     private TextView teamwork;
@@ -28,8 +30,14 @@ public class ViewPeopleFragment extends Fragment {
     private String searchedId;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.user_profile_layout,null);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.user_profile_layout);
+        //insert and active navBar
+        /*NavBarFragment navBar = new NavBarFragment();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.navBar, navBar);
+        transaction.commit();*/
 
         //initView
         friendliness = (TextView)findViewById(R.id.friendliness_score);
@@ -41,19 +49,22 @@ public class ViewPeopleFragment extends Fragment {
         rateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), RateActivity.class));
+                startActivity(new Intent(ViewPeopleActivity.this, RateActivity.class));
             }
         });
+
+        //get searchedId
         Intent intent = getIntent();
         String searchedId = intent.getStringExtra("searchedId");
-        MemberServiceCenter.getSearchedUserInfo(searchedId);
-        return view;
-    }
+        //User user = MemberServiceCenter.getInstance(ViewPeopleActivity.this).getSearchedUserInfo(searchedId);
 
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
+        //init Data
+        /*friendliness.setText(user.getFriendiScore());
+        skills.setText(user.getSkillsScore());
+        teamwork.setText(user.getTeamworkScore());
+        funfactor.setText(user.getFunScore());*/
 
+
+    }
 
 }

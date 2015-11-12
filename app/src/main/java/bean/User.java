@@ -69,6 +69,7 @@ public class User implements Serializable{
             result.skillsScore = obj.optString("skillsScore");
             result.teamworkScore = obj.optString("teamworkScore");
             result.funScore = obj.optString("funScore");
+
         }catch(Exception e){
             Log.e("JsonErr",""+e);
         }
