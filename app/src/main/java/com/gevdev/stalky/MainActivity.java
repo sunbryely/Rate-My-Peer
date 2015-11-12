@@ -21,6 +21,8 @@ import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
+import Service.MemberServiceCenter;
+
 public class MainActivity extends Activity {
 
     public final static String EXTRA_MESSAGE = "com.gevdev.Stalky.MESSAGE";
@@ -34,6 +36,7 @@ public class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        new MemberServiceCenter(this);
 
 
         FacebookSdk.sdkInitialize(this.getApplicationContext());
