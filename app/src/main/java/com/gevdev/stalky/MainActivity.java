@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.facebook.AccessToken;
@@ -16,6 +16,10 @@ import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
+import com.mikepenz.materialdrawer.Drawer;
+import com.mikepenz.materialdrawer.DrawerBuilder;
+import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
+import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
 public class MainActivity extends Activity {
 
@@ -30,6 +34,7 @@ public class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+
 
         FacebookSdk.sdkInitialize(this.getApplicationContext());
 
@@ -50,7 +55,8 @@ public class MainActivity extends Activity {
                                         + "\n" + "Auth Token: " + loginResult.getAccessToken().getToken()
                         );*/
 
-                        onLogin();
+                        //onLogin();
+
 
                     }
 
@@ -65,7 +71,7 @@ public class MainActivity extends Activity {
                     public void onError(FacebookException e) {
                         // App code
                         info.setText("Login Attempt failed due to an error " + e.toString() +
-                                     ". WHY WON'T ANYONE HELP ME");
+                                ". WHY WON'T ANYONE HELP ME");
                     }
                 });
     }
@@ -76,13 +82,6 @@ public class MainActivity extends Activity {
         callbackManager.onActivityResult(requestCode, resultCode, data);
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
 
     @Override
     protected void onResume() {
@@ -101,8 +100,31 @@ public class MainActivity extends Activity {
     }
 
 
+    public boolean onCreateOptionsMenu(Menu menu) {
 
+        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withName("View People");
 
+        new DrawerBuilder()
+                .withActivity(this)
+                .withTranslucentStatusBar(false)
+                .withActionBarDrawerToggle(false)
+                .addDrawerItems(
+                        //pass your items here
+                        item1
+                        )
+                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                    @Override
+                    public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
+                        // do something with the clicked item :D
+                        onLogin();
+                        return true;
+                    }
+                })
+                .build();
+        return true;
+    }
+
+/*
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -116,10 +138,11 @@ public class MainActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
 
     /*
+        ========================= GEV ================================
         This method will execute some actions as the MainActivity loads
 
         If a user is logged in, create a new Intent and switch to the the user search activity
@@ -128,12 +151,19 @@ public class MainActivity extends Activity {
         If a user is not logged in, just let the user login, and the callback from the FB
         login function will be used to move to the search activity.
      */
-    private void onLogin()
-    {
-
-
-        Intent intent = new Intent(this, UserSearch.class);
+    private void onLogin() {
+        Intent intent = new Intent(this, ViewPeopleActivity.class);
         startActivity(intent);
+    }
+
+    /*
+        ========================== GEV =======================
+        This method will return true if facebook user is already logged in via facebook,
+        false otherwise
+     */
+    public boolean isLoggedIn() {
+        AccessToken accessToken = AccessToken.getCurrentAccessToken();
+        return accessToken != null;
     }
 
 
