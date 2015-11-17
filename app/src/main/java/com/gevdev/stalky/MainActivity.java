@@ -3,10 +3,15 @@ package com.gevdev.stalky;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -21,6 +26,13 @@ import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
+
 import Service.MemberServiceCenter;
 
 public class MainActivity extends Activity {
@@ -30,6 +42,7 @@ public class MainActivity extends Activity {
     private TextView info;
     private LoginButton loginButton;
     private CallbackManager callbackManager;
+    private static final String TAG = "Login";
 
 
     @Override
@@ -51,7 +64,7 @@ public class MainActivity extends Activity {
         LoginManager.getInstance().registerCallback(callbackManager,
                 new FacebookCallback<LoginResult>() {
                     @Override
-                    public void onSuccess(LoginResult loginResult) {
+                    public void onSuccess(final LoginResult loginResult) {
                         // App code
                         /*info.setText(
                                 "User ID: " + loginResult.getAccessToken().getUserId()
@@ -60,14 +73,38 @@ public class MainActivity extends Activity {
 
                         //onLogin();
 
+                        String URL= String.format("54.149.222.140/login");
+                        //JSONObject objectToPost = new JSONObject();
+                        //objectToPost.put(key, value);
+                        JsonObjectRequest jsonRequest = new JsonObjectRequest
+                                (Request.Method.POST, URL, null, new Response.Listener<JSONObject>() {
+                                    @Override
+                                    public void onResponse(JSONObject jsonObject) {
+                                        Log.i("json", jsonObject.toString());
+                                    }
 
+                                }, new Response.ErrorListener() {
+                                    @Override
+                                    public void onErrorResponse(VolleyError volleyError) {
+                                        volleyError.printStackTrace();
+                                    }
+                                }) {
+                            @Override
+                            protected Map<String, String> getParams() {
+                                Map<String, String> params = new HashMap<String, String>();
+                                params.put("userId", loginResult.getAccessToken().getUserId());
+                                params.put("userToken", loginResult.getAccessToken().getToken());
+                                return params;
+                            }
+                        };
+
+                        MemberServiceCenter.requestQueue.add(jsonRequest);
                     }
 
                     @Override
                     public void onCancel() {
                         // App code
                         info.setText("Login attempt was cancelled");
-
                     }
 
                     @Override

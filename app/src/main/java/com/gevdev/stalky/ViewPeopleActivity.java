@@ -57,10 +57,10 @@ public class ViewPeopleActivity extends Activity {
         });
 
         //get searchedId
-        Intent intent = getIntent();
+        /*Intent intent = getIntent();
         String searchedId = intent.getStringExtra("searchedId");
 
-        String URL= String.format("/users/%s", searched_id);
+        String URL= String.format("54.149.222.140/users/%s", searched_id);
         JsonObjectRequest jsonRequest = new JsonObjectRequest
                 (Request.Method.GET, URL, null, new Response.Listener<JSONObject>() {
                     @Override
@@ -87,10 +87,10 @@ public class ViewPeopleActivity extends Activity {
 
                 });
 
-        MemberServiceCenter.requestQueue.add(jsonRequest);
+        MemberServiceCenter.requestQueue.add(jsonRequest);*/
     }
 
-    protected void updateUI(JSONArray jArray) {
+    /*protected void updateUI(JSONArray jArray) {
         try {
 
             JSONObject obj0 = jArray.getJSONObject(0);
@@ -106,7 +106,7 @@ public class ViewPeopleActivity extends Activity {
 
         }
 
-    }
+    }*/
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
