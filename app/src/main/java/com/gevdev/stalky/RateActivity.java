@@ -1,31 +1,16 @@
 package com.gevdev.stalky;
 
-import android.os.Bundle;
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Message;
-import android.util.Log;
 import android.view.Menu;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
 import com.mikepenz.materialdrawer.DrawerBuilder;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.w3c.dom.Text;
-import org.xml.sax.helpers.DefaultHandler;
-
-import Service.MemberServiceCenter;
 
 /**
  * Created by zhuchen on 10/27/15.
@@ -48,11 +33,16 @@ public class RateActivity extends Activity{
     private float teamStars;
     private float funStars;
 
+    private Tracker mTracker;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.rate_activity_layout);
+
+        AnalyticsApplication application = (AnalyticsApplication) getApplication();
+        mTracker = application.getDefaultTracker();
 
         addListenerOnRatingBar();
         addSubmitListener();
@@ -88,7 +78,7 @@ public class RateActivity extends Activity{
 
         //set listener for team ratings bar
         teamRatingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-            public void onRatingChanged(RatingBar teamRatingBar, float rating,  boolean fromUser) {
+            public void onRatingChanged(RatingBar teamRatingBar, float rating, boolean fromUser) {
                 teamValue.setText(String.valueOf(rating));
                 teamStars = teamRatingBar.getRating();
             }
@@ -96,12 +86,18 @@ public class RateActivity extends Activity{
 
         //set listener for friend ratings bar
         funRatingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-            public void onRatingChanged(RatingBar funRatingBar, float rating,  boolean fromUser) {
+            public void onRatingChanged(RatingBar funRatingBar, float rating, boolean fromUser) {
                 funValue.setText(String.valueOf(rating));
                 funStars = funRatingBar.getRating();
             }
         });
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mTracker.send(new HitBuilders.ScreenViewBuilder().build());
     }
 
     //Listen for click on submit button
@@ -113,6 +109,16 @@ public class RateActivity extends Activity{
 
 
         //submit the rating
+    }
+
+    protected void onPause() {
+        super.onPause();
+
+        // Logs 'app deactivate' App Event.
+        mTracker.send(new HitBuilders.EventBuilder()
+                .setCategory("Action")
+                .setAction("Paused")
+                .build());
     }
 
     //Initialize Side Nav

@@ -21,13 +21,13 @@ import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
-import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
@@ -43,6 +43,9 @@ public class MainActivity extends Activity {
     private LoginButton loginButton;
     private CallbackManager callbackManager;
     private static final String TAG = "Login";
+    //Used for analytics
+    private Tracker mTracker;
+
 
 
     @Override
@@ -51,6 +54,8 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         new MemberServiceCenter(this);
 
+        AnalyticsApplication application = (AnalyticsApplication) getApplication();
+        mTracker = application.getDefaultTracker();
 
         FacebookSdk.sdkInitialize(this.getApplicationContext());
 
@@ -60,6 +65,8 @@ public class MainActivity extends Activity {
 
         info = (TextView) findViewById(R.id.info);
         loginButton = (LoginButton) findViewById(R.id.login_button);
+
+
 
         LoginManager.getInstance().registerCallback(callbackManager,
                 new FacebookCallback<LoginResult>() {
@@ -73,7 +80,14 @@ public class MainActivity extends Activity {
 
                         //onLogin();
 
-                        String URL= String.format("54.149.222.140/login");
+                        mTracker.send(new HitBuilders.EventBuilder()
+                                .setCategory("Login")
+                                .setAction("Successfull Facebook Login")
+                                .build());
+
+
+
+                        String URL = String.format("54.149.222.140/login");
                         //JSONObject objectToPost = new JSONObject();
                         //objectToPost.put(key, value);
                         JsonObjectRequest jsonRequest = new JsonObjectRequest
@@ -105,11 +119,20 @@ public class MainActivity extends Activity {
                     public void onCancel() {
                         // App code
                         info.setText("Login attempt was cancelled");
+
+                        mTracker.send(new HitBuilders.EventBuilder()
+                                .setCategory("Login")
+                                .setAction("Facebook Login Cancelled by User")
+                                .build());
                     }
 
                     @Override
                     public void onError(FacebookException e) {
                         // App code
+                        mTracker.send(new HitBuilders.EventBuilder()
+                                .setCategory("Login")
+                                .setAction("Error with Facebook Login")
+                                .build());
                         info.setText("Login Attempt failed due to an error " + e.toString() +
                                 ". WHY WON'T ANYONE HELP ME");
                     }
@@ -129,6 +152,7 @@ public class MainActivity extends Activity {
 
         // Logs 'install' and 'app activate' App Events.
         AppEventsLogger.activateApp(this);
+        mTracker.send(new HitBuilders.ScreenViewBuilder().build());
     }
 
     @Override
@@ -136,6 +160,10 @@ public class MainActivity extends Activity {
         super.onPause();
 
         // Logs 'app deactivate' App Event.
+        mTracker.send(new HitBuilders.EventBuilder()
+                .setCategory("Action")
+                .setAction("Paused")
+                .build());
         AppEventsLogger.deactivateApp(this);
     }
 
@@ -157,6 +185,10 @@ public class MainActivity extends Activity {
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         // do something with the clicked item :D
                         onLogin();
+                        mTracker.send(new HitBuilders.EventBuilder()
+                                .setCategory("SideMenu")
+                                .setAction("View People Clicked from SideMenu")
+                                .build());
                         return true;
                     }
                 })
@@ -205,6 +237,11 @@ public class MainActivity extends Activity {
         AccessToken accessToken = AccessToken.getCurrentAccessToken();
         return accessToken != null;
     }
+
+    /**
+     * Return the title of the currently displayed image.
+     * @return title of image
+     */
 
 
 }

@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
 
 android {
     compileSdkVersion 23
@@ -35,4 +37,7 @@ dependencies {
     compile('com.mikepenz:materialdrawer:4.4.6@aar') {
         transitive = true
     }
+    //Google Analytics
+    compile 'com.google.android.gms:play-services-analytics:8.3.0'
+
 }
