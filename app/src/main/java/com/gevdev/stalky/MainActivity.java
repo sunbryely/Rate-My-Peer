@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
     //Used for analytics
     private Tracker mTracker;
 
-
+    public static AccessToken accessToken;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -79,6 +79,7 @@ public class MainActivity extends Activity {
                         );*/
 
                         //onLogin();
+                        accessToken = loginResult.getAccessToken();
 
                         mTracker.send(new HitBuilders.EventBuilder()
                                 .setCategory("Login")

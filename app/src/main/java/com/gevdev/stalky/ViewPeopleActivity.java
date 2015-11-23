@@ -1,30 +1,63 @@
 package com.gevdev.stalky;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 import com.mikepenz.materialdrawer.DrawerBuilder;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.InputStream;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+
+import Service.MemberServiceCenter;
+
 
 /**
  * view people's rating profile
  * @author Sherry
  */
 
-public class ViewPeopleActivity extends AppCompatActivity {
+public class ViewPeopleActivity extends Activity {
+    private ImageView profileImage;
+    private TextView name;
     private TextView friendliness;
     private TextView skills;
     private TextView teamwork;
     private TextView funfactor;
+    private RatingBar friendStar;
+    private RatingBar skillStar;
+    private RatingBar teamStar;
+    private RatingBar funStar;
+    private ListView list;
+    private List<String> commentsList = new ArrayList<String>();
     private Button rateBtn;
     private String searchedId;
     private static final String TAG = "ViewPeopleFragment";
@@ -40,10 +73,21 @@ public class ViewPeopleActivity extends AppCompatActivity {
         mTracker = application.getDefaultTracker();
 
         //initView
+        profileImage = (ImageView) findViewById(R.id.user_profile_image);
+        name = (TextView) findViewById(R.id.profile_name);
         friendliness = (TextView)findViewById(R.id.friendliness_score);
         skills = (TextView) findViewById(R.id.skills_score);
         teamwork = (TextView) findViewById(R.id.teamwork_score);
         funfactor = (TextView) findViewById(R.id.funfactor_score);
+        friendStar = (RatingBar) findViewById(R.id.friendliness_rating);
+        skillStar = (RatingBar) findViewById(R.id.skills_rating);
+        teamStar = (RatingBar) findViewById(R.id.teamwork_rating);
+        funStar = (RatingBar) findViewById(R.id.funfactor_rating);
+        list = (ListView) findViewById(R.id.list);
+        ArrayAdapter<String> arrayAdapter = null;
+        list.setAdapter(arrayAdapter);
+
+
         rateBtn = (Button) findViewById(R.id.rate_btn);
 
         rateBtn.setOnClickListener(new View.OnClickListener() {
@@ -54,10 +98,44 @@ public class ViewPeopleActivity extends AppCompatActivity {
         });
 
         //get searchedId
-        /*Intent intent = getIntent();
+        Intent intent = getIntent();
+        String profileName = intent.getStringExtra("profileName");
+        name.setText(profileName);
         String searchedId = intent.getStringExtra("searchedId");
 
-        String URL= String.format("54.149.222.140/users/%s", searched_id);
+        //get picture url
+        final String[] url = new String[1];
+//        String path = "/" + search_id + "/picture";
+        String path = "/100006683413828/picture";
+        GraphRequest request = GraphRequest.newGraphPathRequest(
+                                MainActivity.accessToken,
+                                path,
+                                new GraphRequest.Callback() {
+            @Override
+            public void onCompleted(GraphResponse response) {
+                JSONObject json =  response.getJSONObject();
+                try {
+                    url[0] = json.getString("url");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+            }
+        });
+
+        Bundle parameters = new Bundle();
+        parameters.putString("type", "large");
+        request.setParameters(parameters);
+        request.executeAsync();
+
+        //get picture task
+        Drawable d = LoadImageFromWebOperations(url[0]);
+        profileImage.setImageDrawable(d);
+
+
+        //String URL= String.format("54.149.222.140/users/%s", searched_id);
+        String URL= String.format("54.149.222.140/users/%s", "100006683413828");
         JsonObjectRequest jsonRequest = new JsonObjectRequest
                 (Request.Method.GET, URL, null, new Response.Listener<JSONObject>() {
                     @Override
@@ -84,26 +162,57 @@ public class ViewPeopleActivity extends AppCompatActivity {
 
                 });
 
-        MemberServiceCenter.requestQueue.add(jsonRequest);*/
+        MemberServiceCenter.requestQueue.add(jsonRequest);
     }
 
-    /*protected void updateUI(JSONArray jArray) {
+    protected void updateUI(JSONArray jArray) {
         try {
 
             JSONObject obj0 = jArray.getJSONObject(0);
-            friendliness.setText(obj0.getString("friendliness"));
-            JSONObject obj1 = jArray.getJSONObject(1);
-            skills.setText(obj1.getString("skills"));
-            JSONObject obj2 = jArray.getJSONObject(2);
-            teamwork.setText(obj2.getString("teamwork"));
-            JSONObject obj3 = jArray.getJSONObject(3);
-            funfactor.setText(obj3.getString("funfactor"));
+            String friendScore = obj0.getString("friendliness");
+            friendliness.setText(friendScore);
+            friendStar.setRating(Float.parseFloat("friendScore"));
 
+            JSONObject obj1 = jArray.getJSONObject(1);
+            String skillScore = obj1.getString("skills");
+            skills.setText(skillScore);
+            skillStar.setRating(Float.parseFloat("skillScore"));
+
+            JSONObject obj2 = jArray.getJSONObject(2);
+            String teamScore = obj2.getString("teamwork");
+            teamwork.setText(teamScore);
+            skillStar.setRating(Float.parseFloat("teamScore"));
+
+            JSONObject obj3 = jArray.getJSONObject(3);
+            String funScore = obj3.getString("funfactor");
+            funfactor.setText(funScore);
+            funStar.setRating(Float.parseFloat("funScore"));
+
+            JSONArray commentsArray = jArray.getJSONArray(4);
+            for (int i = 0; i < commentsArray.length(); i++) {
+                commentsList.add(commentsArray.getJSONObject(i).getString("comment"));
+            }
+
+            ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
+                this,
+                android.R.layout.simple_list_item_1,
+                commentsList);
+            list.setAdapter(arrayAdapter);
         }catch (JSONException e) {
 
         }
 
-    }*/
+    }
+
+    public static Drawable LoadImageFromWebOperations(String url) {
+        try {
+            InputStream is = (InputStream) new URL(url).getContent();
+            Drawable d = Drawable.createFromStream(is, "profilePicture");
+            return d;
+        } catch (Exception e) {
+            return null;
+        }
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
