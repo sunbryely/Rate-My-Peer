@@ -135,7 +135,7 @@ public class ViewPeopleActivity extends Activity {
 
 
         //String URL= String.format("54.149.222.140/users/%s", searched_id);
-        String URL= String.format("54.149.222.140/users/%s", "100006683413828");
+        String URL= String.format("http://54.149.222.140/users/%s", "100006683413828");
         JsonObjectRequest jsonRequest = new JsonObjectRequest
                 (Request.Method.GET, URL, null, new Response.Listener<JSONObject>() {
                     @Override
@@ -144,9 +144,9 @@ public class ViewPeopleActivity extends Activity {
 
 
                         try {
-                            JSONArray jArray = jsonObject.getJSONArray("searched_id");
-                            Log.e(TAG, "contacts = " + jArray.toString());
-                            updateUI(jArray);
+                            JSONObject obj = jsonObject.getJSONObject("searched_id");
+                            Log.e(TAG, "contacts = " + obj.toString());
+                            updateUI(obj);
 
                         } catch (JSONException e) {
                             Log.e(TAG, "error");
@@ -165,30 +165,25 @@ public class ViewPeopleActivity extends Activity {
         MemberServiceCenter.requestQueue.add(jsonRequest);
     }
 
-    protected void updateUI(JSONArray jArray) {
+    protected void updateUI(JSONObject obj) {
         try {
-
-            JSONObject obj0 = jArray.getJSONObject(0);
-            String friendScore = obj0.getString("friendliness");
+            String friendScore = obj.getString("friendliness");
             friendliness.setText(friendScore);
             friendStar.setRating(Float.parseFloat("friendScore"));
 
-            JSONObject obj1 = jArray.getJSONObject(1);
-            String skillScore = obj1.getString("skills");
+            String skillScore = obj.getString("skills");
             skills.setText(skillScore);
             skillStar.setRating(Float.parseFloat("skillScore"));
 
-            JSONObject obj2 = jArray.getJSONObject(2);
-            String teamScore = obj2.getString("teamwork");
+            String teamScore = obj.getString("teamwork");
             teamwork.setText(teamScore);
             skillStar.setRating(Float.parseFloat("teamScore"));
 
-            JSONObject obj3 = jArray.getJSONObject(3);
-            String funScore = obj3.getString("funfactor");
+            String funScore = obj.getString("funfactor");
             funfactor.setText(funScore);
             funStar.setRating(Float.parseFloat("funScore"));
 
-            JSONArray commentsArray = jArray.getJSONArray(4);
+            JSONArray commentsArray = obj.getJSONArray("comments");
             for (int i = 0; i < commentsArray.length(); i++) {
                 commentsList.add(commentsArray.getJSONObject(i).getString("comment"));
             }
