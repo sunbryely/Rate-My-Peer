@@ -86,7 +86,6 @@ public class ViewPeopleActivity extends Activity {
         ArrayAdapter<String> arrayAdapter = null;
         list.setAdapter(arrayAdapter);
 
-
         rateBtn = (Button) findViewById(R.id.rate_btn);
 
         rateBtn.setOnClickListener(new View.OnClickListener() {
