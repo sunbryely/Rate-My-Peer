@@ -155,19 +155,20 @@ public class ViewPeopleActivity extends Activity {
 
     protected void updateUI(JSONObject obj) {
         try {
-            String friendScore = obj.getString("friendliness");
+            JSONObject ratingObj = obj.getJSONObject("ratings");
+            String friendScore = ratingObj.getString("friendliness");
             friendliness.setText(friendScore);
             friendStar.setRating(Float.parseFloat(friendScore));
 
-            String skillScore = obj.getString("skills");
+            String skillScore = ratingObj.getString("skill");
             skills.setText(skillScore);
             skillStar.setRating(Float.parseFloat(skillScore));
 
-            String teamScore = obj.getString("teamwork");
+            String teamScore = ratingObj.getString("teamwork");
             teamwork.setText(teamScore);
             teamStar.setRating(Float.parseFloat(teamScore));
 
-            String funScore = obj.getString("funfactor");
+            String funScore = ratingObj.getString("funfactor");
             funfactor.setText(funScore);
             funStar.setRating(Float.parseFloat(funScore));
 
@@ -177,7 +178,7 @@ public class ViewPeopleActivity extends Activity {
             }
 
             ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
-                this,
+                ViewPeopleActivity.this,
                 android.R.layout.simple_list_item_1,
                 commentsList);
             list.setAdapter(arrayAdapter);
