@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.Menu;
@@ -141,18 +140,7 @@ public class ViewPeopleActivity extends Activity {
                     @Override
                     public void onResponse(JSONObject jsonObject) {
                         Log.e(TAG, "jsonObject = " + jsonObject.toString());
-
-
-                        try {
-                            JSONObject obj = jsonObject.getJSONObject("searched_id");
-                            Log.e(TAG, "contacts = " + obj.toString());
-                            updateUI(obj);
-
-                        } catch (JSONException e) {
-                            Log.e(TAG, "error");
-                            e.printStackTrace();
-
-                        }
+                        updateUI(jsonObject);
                     }
                 }, new Response.ErrorListener() {
                     @Override
@@ -169,19 +157,19 @@ public class ViewPeopleActivity extends Activity {
         try {
             String friendScore = obj.getString("friendliness");
             friendliness.setText(friendScore);
-            friendStar.setRating(Float.parseFloat("friendScore"));
+            friendStar.setRating(Float.parseFloat(friendScore));
 
             String skillScore = obj.getString("skills");
             skills.setText(skillScore);
-            skillStar.setRating(Float.parseFloat("skillScore"));
+            skillStar.setRating(Float.parseFloat(skillScore));
 
             String teamScore = obj.getString("teamwork");
             teamwork.setText(teamScore);
-            skillStar.setRating(Float.parseFloat("teamScore"));
+            teamStar.setRating(Float.parseFloat(teamScore));
 
             String funScore = obj.getString("funfactor");
             funfactor.setText(funScore);
-            funStar.setRating(Float.parseFloat("funScore"));
+            funStar.setRating(Float.parseFloat(funScore));
 
             JSONArray commentsArray = obj.getJSONArray("comments");
             for (int i = 0; i < commentsArray.length(); i++) {
