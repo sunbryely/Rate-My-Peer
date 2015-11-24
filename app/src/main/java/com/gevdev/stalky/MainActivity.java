@@ -88,7 +88,7 @@ public class MainActivity extends Activity {
 
 
 
-                        String URL = String.format("54.149.222.140/login");
+                        String URL = String.format("http://54.149.222.140/login");
                         //JSONObject objectToPost = new JSONObject();
                         //objectToPost.put(key, value);
                         JsonObjectRequest jsonRequest = new JsonObjectRequest
@@ -180,7 +180,7 @@ public class MainActivity extends Activity {
                 .addDrawerItems(
                         //pass your items here
                         item1
-                        )
+                )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
