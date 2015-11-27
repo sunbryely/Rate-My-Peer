@@ -26,12 +26,14 @@ import com.facebook.GraphResponse;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 import com.mikepenz.materialdrawer.DrawerBuilder;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.InputStream;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -101,35 +103,11 @@ public class ViewPeopleActivity extends Activity {
         name.setText(profileName);
         String searchedId = intent.getStringExtra("searchedId");
 
-        //get picture url
-        final String[] url = new String[1];
-//        String path = "/" + search_id + "/picture";
-        String path = "/100006683413828/picture";
-        GraphRequest request = GraphRequest.newGraphPathRequest(
-                                MainActivity.accessToken,
-                                path,
-                                new GraphRequest.Callback() {
-            @Override
-            public void onCompleted(GraphResponse response) {
-                JSONObject json =  response.getJSONObject();
-                try {
-                    url[0] = json.getString("url");
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
 
+        String userID = "100006683413828";
+        String imageURL = "https://graph.facebook.com/" + userID + "/picture?type=large";
+        Picasso.with(this).load(imageURL).into(profileImage);
 
-            }
-        });
-
-        Bundle parameters = new Bundle();
-        parameters.putString("type", "large");
-        request.setParameters(parameters);
-        request.executeAsync();
-
-        //get picture task
-        Drawable d = LoadImageFromWebOperations(url[0]);
-        profileImage.setImageDrawable(d);
 
 
         //String URL= String.format("54.149.222.140/users/%s", searched_id);
