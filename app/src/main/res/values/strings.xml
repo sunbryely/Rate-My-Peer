@@ -13,4 +13,5 @@
     <string name="FunFactor">Fun Factor</string>
     <string name="Comments">Comments</string>
     <string name="title_activity_view_people">ViewPeopleActivity</string>
+    <string name="title_activity_rate">RateActivity</string>
 </resources>

@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -109,13 +110,12 @@ public class ViewPeopleActivity extends AppCompatActivity {
 
         rateBtn = (Button) findViewById(R.id.rate_btn);
 
-        //TODO
-//        rateBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(ViewPeopleActivity.this, RateActivity.class));
-//            }
-//        });
+        rateBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ViewPeopleActivity.this, RateActivity.class));
+            }
+        });
 
 
         //get searchedId

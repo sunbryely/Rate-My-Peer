@@ -18,6 +18,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.facebook.AccessToken;
+import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     private LoginButton loginButton;
     private CallbackManager callbackManager;
     public static AccessToken accessToken;
+    private AccessTokenTracker accessTokenTracker;
     private static final String TAG = "Login";
     private Tracker mTracker;
     private Toolbar toolbar;
@@ -60,6 +62,16 @@ public class MainActivity extends AppCompatActivity {
         mTracker = application.getDefaultTracker();
 
         FacebookSdk.sdkInitialize(this.getApplicationContext());
+
+        accessToken = AccessToken.getCurrentAccessToken();
+
+        accessTokenTracker = new AccessTokenTracker() {
+            @Override
+            protected void onCurrentAccessTokenChanged(AccessToken accessToken, AccessToken newAccessToken) {
+                updateWithToken(newAccessToken);
+            }
+        };
+
         callbackManager = CallbackManager.Factory.create();
 
         mTracker.send(new HitBuilders.EventBuilder()
@@ -233,5 +245,9 @@ public class MainActivity extends AppCompatActivity {
     private void onLogin() {
         Intent intent = new Intent(this, ViewPeopleActivity.class);
         startActivity(intent);
+    }
+
+    private void updateWithToken(AccessToken currentAccessToken) {
+        if(currentAccessToken != null) onLogin();
     }
 }

@@ -69,30 +69,30 @@ public class RateActivity extends Activity{
         });
 
         //set listener for skills ratings bar
-        skillsRatingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-            public void onRatingChanged(RatingBar skillsRatingBar, float rating,  boolean fromUser) {
-                skillsValue.setText(String.valueOf(rating));
-                skillsStars = skillsRatingBar.getRating();
-            }
-        });
+    skillsRatingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+        public void onRatingChanged(RatingBar skillsRatingBar, float rating,  boolean fromUser) {
+            skillsValue.setText(String.valueOf(rating));
+            skillsStars = skillsRatingBar.getRating();
+        }
+    });
 
-        //set listener for team ratings bar
-        teamRatingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-            public void onRatingChanged(RatingBar teamRatingBar, float rating, boolean fromUser) {
-                teamValue.setText(String.valueOf(rating));
-                teamStars = teamRatingBar.getRating();
-            }
-        });
+    //set listener for team ratings bar
+    teamRatingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+        public void onRatingChanged(RatingBar teamRatingBar, float rating, boolean fromUser) {
+            teamValue.setText(String.valueOf(rating));
+            teamStars = teamRatingBar.getRating();
+        }
+    });
 
-        //set listener for friend ratings bar
-        funRatingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
-            public void onRatingChanged(RatingBar funRatingBar, float rating, boolean fromUser) {
-                funValue.setText(String.valueOf(rating));
-                funStars = funRatingBar.getRating();
-            }
-        });
+    //set listener for friend ratings bar
+    funRatingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+        public void onRatingChanged(RatingBar funRatingBar, float rating, boolean fromUser) {
+            funValue.setText(String.valueOf(rating));
+            funStars = funRatingBar.getRating();
+        }
+    });
 
-    }
+}
 
     @Override
     protected void onResume() {

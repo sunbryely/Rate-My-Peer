@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:2:1-40:12
+ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:2:1-43:12
 	package
 		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:3:5-32
 		INJECTED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml
@@ -26,7 +26,7 @@ MERGED from [com.google.android.gms:play-services-analytics:8.3.0] D:\Android St
 	android:name
 		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:6:22-76
 application
-ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:8:5-38:19
+ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:8:5-41:19
 MERGED from [com.google.android.gms:play-services-measurement:8.3.0] D:\Android Studio Projects\Stalky\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.3.0\AndroidManifest.xml:26:5-46:19
 MERGED from [com.google.android.gms:play-services-basement:8.3.0] D:\Android Studio Projects\Stalky\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.3.0\AndroidManifest.xml:20:5-24:19
 MERGED from [com.android.support:support-v4:23.1.1] D:\Android Studio Projects\Stalky\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
@@ -63,45 +63,53 @@ MERGED from [Stalky:volley:unspecified] D:\Android Studio Projects\Stalky\app\bu
 	android:name
 		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:9:9-45
 meta-data#com.facebook.sdk.ApplicationId
-ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:16:9-18:46
+ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:15:9-17:46
 	android:value
-		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:18:13-43
+		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:17:13-43
 	android:name
-		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:17:13-58
+		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:16:13-58
 activity#com.gevdev.stalky.MainActivity
-ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:20:9-29:20
+ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:19:9-28:20
 	android:label
-		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:22:13-45
+		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:21:13-45
 	android:theme
-		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:23:13-56
+		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:22:13-56
 	android:name
-		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:21:13-41
+		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:20:13-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:24:13-28:29
+ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:23:13-27:29
 action#android.intent.action.MAIN
-ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:25:17-69
+ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:24:17-69
 	android:name
-		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:25:25-66
+		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:24:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:27:17-77
+ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:26:17-77
 	android:name
-		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:27:27-74
+		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:26:27-74
 activity#com.facebook.FacebookActivity
-ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:30:9-33:75
+ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:29:9-32:75
 	android:label
-		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:32:13-35
+		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:31:13-35
 	android:theme
-		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:33:13-72
+		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:32:13-72
 	android:name
-		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:31:13-57
+		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:30:13-57
 activity#com.gevdev.stalky.ViewPeopleActivity
-ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:34:9-37:68
+ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:33:9-36:59
 	android:label
-		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:36:13-63
+		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:35:13-63
 	android:theme
-		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:37:13-56
+		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:36:13-56
 	android:name
-		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:35:13-47
+		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:34:13-47
+activity#com.gevdev.stalky.RateActivity
+ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:37:9-40:68
+	android:label
+		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:39:13-56
+	android:theme
+		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:40:13-56
+	android:name
+		ADDED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml:38:13-41
 uses-sdk
 INJECTED from D:\Android Studio Projects\Stalky\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.google.android.gms:play-services-measurement:8.3.0] D:\Android Studio Projects\Stalky\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.3.0\AndroidManifest.xml:18:5-42

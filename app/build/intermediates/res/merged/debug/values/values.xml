@@ -818,6 +818,7 @@
     <string name="messenger_send_button_text">Send</string>
     <string name="rate">rate</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="title_activity_rate">RateActivity</string>
     <string name="title_activity_search">SearchActivity</string>
     <string name="title_activity_user_search">UserSearch</string>
     <string name="title_activity_view_people">ViewPeopleActivity</string>
