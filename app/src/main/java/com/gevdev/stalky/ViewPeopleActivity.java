@@ -1,6 +1,7 @@
 package com.gevdev.stalky;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.MatrixCursor;
 import android.os.Bundle;
 import android.provider.BaseColumns;
@@ -62,7 +63,8 @@ public class ViewPeopleActivity extends AppCompatActivity {
 
     private String[] SUGGESTIONS;
     private SimpleCursorAdapter mAdapter;
-    ArrayList<String> nameList;
+    ArrayList<String[]> nameList;
+    SearchView searchView;
 
 
     @Override
@@ -193,14 +195,17 @@ public class ViewPeopleActivity extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_main, menu);
         MenuItem searchItem = menu.findItem(R.id.action_search);
-        SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+        searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
         searchView.setSuggestionsAdapter(mAdapter);
 
 
         searchView.setOnSuggestionListener(new SearchView.OnSuggestionListener() {
             @Override
             public boolean onSuggestionClick(int position) {
-                updateProfile("100006683413828");
+                String name = getSuggestion(position);
+                searchView.setQuery(name, true); // submit query now
+
+                updateProfile(name);
                 return true;
             }
 
@@ -297,30 +302,38 @@ public class ViewPeopleActivity extends AppCompatActivity {
     public void addNames(JSONArray jArray) {
         String[] suggestions;
 
+        suggestions = new String[jArray.length()];
+
         for (int i = 0; i < jArray.length(); i++) {
             try {
                 JSONObject obj = jArray.getJSONObject(i);
 
                 String name = obj.getString("name");
-                nameList.add(name);
+                String userID = obj.getString("facebook_id");
+                String[] strArr = {name, userID};
+                nameList.add(strArr);
+                suggestions[i] = name;
             } catch (JSONException e) {
                 e.printStackTrace();
             }
         }
 
-
-        suggestions = new String[nameList.size()];
-
-        for(int i = 0; i<suggestions.length; i++) {
-            suggestions[i] = nameList.get(i);
-        }
-
-        Log.i("BOOGA", String.valueOf(nameList.size()));
-
         SUGGESTIONS = suggestions;
     }
 
-    public void updateProfile(String userID) {
+    public void updateProfile(String name) {
+
+        String userID = "";
+
+        for(int i = 0; i<nameList.size(); i++) {
+            System.err.println(name);
+            if(name.equals(nameList.get(i)[0])) {
+                System.err.println(nameList.get(i)[0] + " : " + nameList.get(i)[1]);
+                userID = nameList.get(i)[1];
+                break;
+            }
+        }
+
         String imageURL = "https://graph.facebook.com/" + userID + "/picture?type=large";
         Picasso.with(this).load(imageURL).into(profileImage);
 
@@ -345,5 +358,11 @@ public class ViewPeopleActivity extends AppCompatActivity {
     private void onLogin() {
         Intent intent = new Intent(this, ViewPeopleActivity.class);
         startActivity(intent);
+    }
+
+    private String getSuggestion(int position) {
+        Cursor cursor = (Cursor) searchView.getSuggestionsAdapter().getItem(position);
+        String suggest1 = cursor.getString(cursor.getColumnIndex("names"));
+        return suggest1;
     }
 }
