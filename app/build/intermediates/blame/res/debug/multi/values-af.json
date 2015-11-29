@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\res\\merged\\debug\\values-af\\values-af.xml",
+        "outputFile": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/res/merged/debug/values-af/values-af.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 204
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 312
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -49,7 +49,7 @@
                     "endOffset": 435
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -68,7 +68,7 @@
                     "endOffset": 535
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -87,7 +87,7 @@
                     "endOffset": 641
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -106,7 +106,7 @@
                     "endOffset": 726
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -125,7 +125,7 @@
                     "endOffset": 829
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -144,7 +144,7 @@
                     "endOffset": 947
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -163,7 +163,7 @@
                     "endOffset": 1023
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -182,7 +182,7 @@
                     "endOffset": 1100
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -201,7 +201,7 @@
                     "endOffset": 1181
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -220,7 +220,7 @@
                     "endOffset": 1288
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -239,7 +239,7 @@
                     "endOffset": 1391
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -258,7 +258,7 @@
                     "endOffset": 1488
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -277,7 +277,7 @@
                     "endOffset": 1596
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -296,7 +296,7 @@
                     "endOffset": 1698
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -315,7 +315,7 @@
                     "endOffset": 1800
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -334,7 +334,7 @@
                     "endOffset": 1917
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -353,7 +353,7 @@
                     "endOffset": 2015
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
@@ -373,7 +373,7 @@
                     "endOffset": 2135
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.6.0\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -393,7 +393,7 @@
                     "endOffset": 2260
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.6.0\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -412,7 +412,7 @@
                     "endOffset": 2354
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.6.0\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -431,7 +431,7 @@
                     "endOffset": 2421
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.6.0\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -450,7 +450,7 @@
                     "endOffset": 2492
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.6.0\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -469,7 +469,7 @@
                     "endOffset": 2554
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.6.0\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -488,7 +488,7 @@
                     "endOffset": 2630
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.6.0\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -507,7 +507,7 @@
                     "endOffset": 2704
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.6.0\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -526,7 +526,7 @@
                     "endOffset": 2796
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.6.0\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -545,7 +545,7 @@
                     "endOffset": 2870
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.6.0\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -564,7 +564,7 @@
                     "endOffset": 2944
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.6.0\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -583,7 +583,7 @@
                     "endOffset": 3027
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.6.0\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -602,7 +602,7 @@
                     "endOffset": 3126
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.6.0\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -621,7 +621,7 @@
                     "endOffset": 3190
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.6.0\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -640,7 +640,7 @@
                     "endOffset": 3254
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.6.0\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -659,7 +659,7 @@
                     "endOffset": 3386
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.6.0\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -678,7 +678,7 @@
                     "endOffset": 3581
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -697,7 +697,7 @@
                     "endOffset": 3766
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -716,7 +716,7 @@
                     "endOffset": 3880
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -735,7 +735,7 @@
                     "endOffset": 4139
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 30,
                         "startColumn": 4,
@@ -754,7 +754,7 @@
                     "endOffset": 4268
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -773,7 +773,7 @@
                     "endOffset": 4456
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -792,7 +792,7 @@
                     "endOffset": 4583
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -811,7 +811,7 @@
                     "endOffset": 4752
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -830,7 +830,7 @@
                     "endOffset": 4877
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -849,7 +849,7 @@
                     "endOffset": 5089
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -868,7 +868,7 @@
                     "endOffset": 5303
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -887,7 +887,7 @@
                     "endOffset": 5425
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -906,7 +906,7 @@
                     "endOffset": 5632
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 24,
                         "startColumn": 4,
@@ -925,7 +925,7 @@
                     "endOffset": 5759
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
@@ -944,7 +944,7 @@
                     "endOffset": 5927
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -963,7 +963,7 @@
                     "endOffset": 6098
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
@@ -982,7 +982,7 @@
                     "endOffset": 6216
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,
@@ -1001,7 +1001,7 @@
                     "endOffset": 6395
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -1020,7 +1020,7 @@
                     "endOffset": 6527
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -1039,7 +1039,7 @@
                     "endOffset": 6711
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 32,
                         "startColumn": 4,
@@ -1058,7 +1058,7 @@
                     "endOffset": 6838
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 31,
                         "startColumn": 4,
@@ -1077,7 +1077,7 @@
                     "endOffset": 6982
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 25,
                         "startColumn": 4,
@@ -1096,7 +1096,7 @@
                     "endOffset": 7237
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 27,
                         "startColumn": 4,
@@ -1115,7 +1115,7 @@
                     "endOffset": 7361
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 26,
                         "startColumn": 4,
@@ -1134,7 +1134,7 @@
                     "endOffset": 7471
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 28,
                         "startColumn": 4,
@@ -1153,7 +1153,7 @@
                     "endOffset": 7659
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -1172,7 +1172,7 @@
                     "endOffset": 7788
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -1191,7 +1191,7 @@
                     "endOffset": 7986
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -1210,7 +1210,7 @@
                     "endOffset": 8121
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -1229,7 +1229,7 @@
                     "endOffset": 8216
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\values-af\\common_strings.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/values-af/common_strings.xml",
                     "position": {
                         "startLine": 29,
                         "startColumn": 4,
@@ -1248,7 +1248,7 @@
                     "endOffset": 8277
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.6.0\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,
@@ -1267,7 +1267,7 @@
                     "endOffset": 8378
                 },
                 "from": {
-                    "file": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-af\\values-af.xml",
+                    "file": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-af/values-af.xml",
                     "position": {
                         "startLine": 23,
                         "startColumn": 4,

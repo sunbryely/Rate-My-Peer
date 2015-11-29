@@ -9,6 +9,8 @@ import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.CursorAdapter;
 import android.support.v4.widget.SimpleCursorAdapter;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -40,6 +42,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Service.MemberServiceCenter;
+import adapter.FullyLinearLayoutManager;
+import adapter.RecyclerViewAdapter;
+import bean.Comment;
 
 public class ViewPeopleActivity extends AppCompatActivity {
 
@@ -54,12 +59,16 @@ public class ViewPeopleActivity extends AppCompatActivity {
     private RatingBar teamStar;
     private RatingBar funStar;
     private ListView list;
-    private List<String> commentsList = new ArrayList<>();
+    private List<Comment> commentsList = new ArrayList<>();
     private Button rateBtn;
     private String searchedId;
     private static final String TAG = "ViewPeopleFragment";
     private Tracker mTracker;
     Toolbar toolbar;
+
+    RecyclerView recyclerView;
+    RecyclerViewAdapter recyclerViewAdapter;
+
 
     private String[] SUGGESTIONS;
     private SimpleCursorAdapter mAdapter;
@@ -103,9 +112,13 @@ public class ViewPeopleActivity extends AppCompatActivity {
         skillStar = (RatingBar) findViewById(R.id.skills_rating);
         teamStar = (RatingBar) findViewById(R.id.teamwork_rating);
         funStar = (RatingBar) findViewById(R.id.funfactor_rating);
-        list = (ListView) findViewById(R.id.list);
-        ArrayAdapter<String> arrayAdapter = null;
-        list.setAdapter(arrayAdapter);
+
+        recyclerView = (RecyclerView) findViewById(R.id.list);
+        recyclerView.setLayoutManager(new FullyLinearLayoutManager(this));
+
+        recyclerViewAdapter = new RecyclerViewAdapter(this);
+        recyclerView.setAdapter(recyclerViewAdapter);
+
 
         rateBtn = (Button) findViewById(R.id.rate_btn);
 
@@ -175,14 +188,15 @@ public class ViewPeopleActivity extends AppCompatActivity {
 
             JSONArray commentsArray = obj.getJSONArray("comments");
             for (int i = 0; i < commentsArray.length(); i++) {
-                commentsList.add(commentsArray.getJSONObject(i).getString("comment"));
+                Comment cur = new Comment();
+                cur.comment = commentsArray.getJSONObject(i).getString("comment");
+                cur.user_id_from = commentsArray.getJSONObject(i).getString("user_id_from");
+                cur.updated_at = commentsArray.getJSONObject(i).getString("updated_at");
+                commentsList.add(cur);
             }
 
-            ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(
-                    ViewPeopleActivity.this,
-                    android.R.layout.simple_list_item_1,
-                    commentsList);
-            list.setAdapter(arrayAdapter);
+            recyclerViewAdapter.setItems(commentsList);
+
         } catch (JSONException e) {
             e.printStackTrace();
         }

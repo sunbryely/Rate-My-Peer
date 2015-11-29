@@ -180,12 +180,16 @@
             android:text="@string/Comments"
             android:textSize="22sp"
             android:id="@+id/textView" />
-        <ListView
-            android:nestedScrollingEnabled="true"
+
+
+        <android.support.v7.widget.RecyclerView
+            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="250dip"
+            android:layout_height="wrap_content"
             android:id="@+id/list"
-            android:layout_gravity="center_horizontal" />
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
     </LinearLayout>
 
 </ScrollView>
