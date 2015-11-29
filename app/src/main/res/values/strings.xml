@@ -1,9 +1,16 @@
 <resources>
     <string name="app_name">Stalky</string>
-
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
     <string name="app_id">969518723094878</string>
     <string name="title_activity_user_search">UserSearch</string>
     <string name="title_activity_search">SearchActivity</string>
+    <string name="ProfilePicture">Profile Picture</string>
+    <string name="rate">rate</string>
+    <string name="Friendliness">Friendliness</string>
+    <string name="Skills">Skills</string>
+    <string name="Teamwork">Teamwork</string>
+    <string name="FunFactor">Fun Factor</string>
+    <string name="Comments">Comments</string>
+    <string name="title_activity_view_people">ViewPeopleActivity</string>
 </resources>

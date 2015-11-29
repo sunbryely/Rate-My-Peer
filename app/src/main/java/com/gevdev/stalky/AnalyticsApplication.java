@@ -1,5 +1,3 @@
-package com.gevdev.stalky;
-
 /*
  * Copyright Google Inc. All Rights Reserved.
  *
@@ -16,7 +14,11 @@ package com.gevdev.stalky;
  * limitations under the License.
  */
 
+package com.gevdev.stalky;
+
+
 import android.app.Application;
+
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Tracker;
 

@@ -1,15 +1,19 @@
 package com.gevdev.stalky;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
+import android.database.MatrixCursor;
 import android.os.Bundle;
+import android.provider.BaseColumns;
 import android.support.v4.view.MenuItemCompat;
+import android.support.v4.widget.CursorAdapter;
+import android.support.v4.widget.SimpleCursorAdapter;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -17,12 +21,12 @@ import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.facebook.GraphRequest;
-import com.facebook.GraphResponse;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 import com.mikepenz.materialdrawer.DrawerBuilder;
@@ -32,21 +36,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
 import Service.MemberServiceCenter;
 
+public class ViewPeopleActivity extends AppCompatActivity {
 
-/**
- * view people's rating profile
- * @author Sherry
- */
-
-public class ViewPeopleActivity extends Activity {
     private ImageView profileImage;
     private TextView name;
     private TextView friendliness;
@@ -58,17 +54,38 @@ public class ViewPeopleActivity extends Activity {
     private RatingBar teamStar;
     private RatingBar funStar;
     private ListView list;
-    private List<String> commentsList = new ArrayList<String>();
+    private List<String> commentsList = new ArrayList<>();
     private Button rateBtn;
     private String searchedId;
     private static final String TAG = "ViewPeopleFragment";
     private Tracker mTracker;
 
+    private String[] SUGGESTIONS;
+    private SimpleCursorAdapter mAdapter;
+    ArrayList<String> nameList;
+
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        nameList = new ArrayList<>();
+
+        getNames();
+
+        String[] from = new String[]{"names"};
+        final int[] to = new int[]{android.R.id.text1};
+        mAdapter = new SimpleCursorAdapter(this,
+                android.R.layout.simple_list_item_1,
+                null,
+                from,
+                to,
+                CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER);
+
+
         setContentView(R.layout.user_profile_layout);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         AnalyticsApplication application = (AnalyticsApplication) getApplication();
         mTracker = application.getDefaultTracker();
@@ -76,7 +93,7 @@ public class ViewPeopleActivity extends Activity {
         //initView
         profileImage = (ImageView) findViewById(R.id.user_profile_image);
         name = (TextView) findViewById(R.id.profile_name);
-        friendliness = (TextView)findViewById(R.id.friendliness_score);
+        friendliness = (TextView) findViewById(R.id.friendliness_score);
         skills = (TextView) findViewById(R.id.skills_score);
         teamwork = (TextView) findViewById(R.id.teamwork_score);
         funfactor = (TextView) findViewById(R.id.funfactor_score);
@@ -90,12 +107,14 @@ public class ViewPeopleActivity extends Activity {
 
         rateBtn = (Button) findViewById(R.id.rate_btn);
 
-        rateBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ViewPeopleActivity.this, RateActivity.class));
-            }
-        });
+        //TODO
+//        rateBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(ViewPeopleActivity.this, RateActivity.class));
+//            }
+//        });
+
 
         //get searchedId
         Intent intent = getIntent();
@@ -103,15 +122,12 @@ public class ViewPeopleActivity extends Activity {
         name.setText(profileName);
         String searchedId = intent.getStringExtra("searchedId");
 
-
         String userID = "100006683413828";
         String imageURL = "https://graph.facebook.com/" + userID + "/picture?type=large";
         Picasso.with(this).load(imageURL).into(profileImage);
 
-
-
         //String URL= String.format("54.149.222.140/users/%s", searched_id);
-        String URL= String.format("http://54.149.222.140/users/%s", "100006683413828");
+        String URL = String.format("http://54.149.222.140/users/%s", "100006683413828");
         JsonObjectRequest jsonRequest = new JsonObjectRequest
                 (Request.Method.GET, URL, null, new Response.Listener<JSONObject>() {
                     @Override
@@ -154,32 +170,71 @@ public class ViewPeopleActivity extends Activity {
                 commentsList.add(commentsArray.getJSONObject(i).getString("comment"));
             }
 
-            ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
-                ViewPeopleActivity.this,
-                android.R.layout.simple_list_item_1,
-                commentsList);
+            ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(
+                    ViewPeopleActivity.this,
+                    android.R.layout.simple_list_item_1,
+                    commentsList);
             list.setAdapter(arrayAdapter);
-        }catch (JSONException e) {
-
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
+
 
     }
 
-    public static Drawable LoadImageFromWebOperations(String url) {
-        try {
-            InputStream is = (InputStream) new URL(url).getContent();
-            Drawable d = Drawable.createFromStream(is, "profilePicture");
-            return d;
-        } catch (Exception e) {
-            return null;
-        }
-    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
         MenuItem searchItem = menu.findItem(R.id.action_search);
         SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+        searchView.setSuggestionsAdapter(mAdapter);
+
+
+        searchView.setOnSuggestionListener(new SearchView.OnSuggestionListener() {
+            @Override
+            public boolean onSuggestionClick(int position) {
+                // Your code here
+                return true;
+            }
+
+            @Override
+            public boolean onSuggestionSelect(int position) {
+                // Your code here
+                return true;
+            }
+        });
+
+        searchView.setOnQueryTextListener(
+                new SearchView.OnQueryTextListener() {
+                    @Override
+                    public boolean onQueryTextSubmit(String query) {
+                        return false;
+
+                    }
+
+                    @Override
+                    public boolean onQueryTextChange(String newText) {
+                        populateAdapter(newText);
+
+//                        String URL = String.format("http://54.149.222.140/user/%s", newText);
+//                        JsonObjectRequest jsonRequest = new JsonObjectRequest
+//                                (Request.Method.GET, URL, null, new Response.Listener<JSONObject>() {
+//                                    @Override
+//                                    public void onResponse(JSONObject jsonObject) {}
+//                                }, new Response.ErrorListener() {
+//                                    @Override
+//                                    public void onErrorResponse(VolleyError volleyError) {
+//                                        volleyError.printStackTrace();
+//                                    }
+//
+//                                });
+//
+//                        MemberServiceCenter.requestQueue.add(jsonRequest);
+                        return false;
+                    }
+                }
+        );
 
         new DrawerBuilder()
                 .withActivity(this)
@@ -192,20 +247,90 @@ public class ViewPeopleActivity extends Activity {
         return true;
     }
 
-
+    @Override
     protected void onResume() {
         super.onResume();
+
+        String name = "View Profile Page";
+
+        mTracker.setScreenName(name);
         mTracker.send(new HitBuilders.ScreenViewBuilder().build());
-    }
-
-    protected void onPause() {
-        super.onPause();
-
-        // Logs 'app deactivate' App Event.
         mTracker.send(new HitBuilders.EventBuilder()
                 .setCategory("Action")
-                .setAction("Paused")
+                .setAction("App Resumed on: " + name)
                 .build());
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        String name = "View Profile Page";
+
+        mTracker.send(new HitBuilders.EventBuilder()
+                .setCategory("Action")
+                .setAction("App Paused on: " + name)
+                .build());
+    }
+
+    private void populateAdapter(String query) {
+        final MatrixCursor c = new MatrixCursor(new String[]{BaseColumns._ID, "names"});
+        for (int i = 0; i < SUGGESTIONS.length; i++) {
+            if (SUGGESTIONS[i].toLowerCase().startsWith(query.toLowerCase()))
+                c.addRow(new Object[]{i, SUGGESTIONS[i]});
+        }
+        mAdapter.changeCursor(c);
+    }
+
+    private void getNames() {
+        String URL = ("http://54.149.222.140/user/_");
+
+
+        JsonArrayRequest jsonRequest = new JsonArrayRequest(URL, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+                addNames(response);
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+            }
+        });
+
+        jsonRequest.setRetryPolicy(new DefaultRetryPolicy(
+                500000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
+        MemberServiceCenter.requestQueue.add(jsonRequest);
+
+
+    }
+
+    public void addNames(JSONArray jArray) {
+        String[] suggestions;
+
+        for (int i = 0; i < jArray.length(); i++) {
+            try {
+                JSONObject obj = jArray.getJSONObject(i);
+
+                String name = obj.getString("name");
+                nameList.add(name);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+        suggestions = new String[nameList.size()];
+
+        for(int i = 0; i<suggestions.length; i++) {
+            suggestions[i] = nameList.get(i);
+        }
+
+        Log.i("BOOGA", String.valueOf(nameList.size()));
+
+        SUGGESTIONS = suggestions;
+    }
 }

@@ -1,10 +1,15 @@
 package com.gevdev.stalky;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.MenuItemCompat;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.SearchView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
@@ -35,22 +40,19 @@ import java.util.Map;
 
 import Service.MemberServiceCenter;
 
-public class MainActivity extends Activity {
 
-    public final static String EXTRA_MESSAGE = "com.gevdev.Stalky.MESSAGE";
+public class MainActivity extends AppCompatActivity {
 
     private TextView info;
     private LoginButton loginButton;
     private CallbackManager callbackManager;
-    private static final String TAG = "Login";
-    //Used for analytics
-    private Tracker mTracker;
-
     public static AccessToken accessToken;
+    private static final String TAG = "Login";
+    private Tracker mTracker;
+    private Toolbar toolbar;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         new MemberServiceCenter(this);
 
@@ -58,25 +60,30 @@ public class MainActivity extends Activity {
         mTracker = application.getDefaultTracker();
 
         FacebookSdk.sdkInitialize(this.getApplicationContext());
-
         callbackManager = CallbackManager.Factory.create();
 
+        mTracker.send(new HitBuilders.EventBuilder()
+                .setCategory("Action")
+                .setAction("App Launched")
+                .build());
+
+
         setContentView(R.layout.activity_main);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         info = (TextView) findViewById(R.id.info);
         loginButton = (LoginButton) findViewById(R.id.login_button);
-
-
 
         LoginManager.getInstance().registerCallback(callbackManager,
                 new FacebookCallback<LoginResult>() {
                     @Override
                     public void onSuccess(final LoginResult loginResult) {
                         // App code
-                        /*info.setText(
+                        info.setText(
                                 "User ID: " + loginResult.getAccessToken().getUserId()
                                         + "\n" + "Auth Token: " + loginResult.getAccessToken().getToken()
-                        );*/
+                        );
 
                         //onLogin();
                         accessToken = loginResult.getAccessToken();
@@ -85,7 +92,6 @@ public class MainActivity extends Activity {
                                 .setCategory("Login")
                                 .setAction("Successfull Facebook Login")
                                 .build());
-
 
 
                         String URL = String.format("http://54.149.222.140/login");
@@ -138,45 +144,58 @@ public class MainActivity extends Activity {
                                 ". WHY WON'T ANYONE HELP ME");
                     }
                 });
-    }
-
+        }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         callbackManager.onActivityResult(requestCode, resultCode, data);
     }
 
-
     @Override
-    protected void onResume() {
+    public void onResume() {
         super.onResume();
 
-        // Logs 'install' and 'app activate' App Events.
         AppEventsLogger.activateApp(this);
+        String name = "Facebook Login Screen";
+
+        mTracker.setScreenName(name);
         mTracker.send(new HitBuilders.ScreenViewBuilder().build());
+        mTracker.send(new HitBuilders.EventBuilder()
+                .setCategory("Action")
+                .setAction("App Resumed on page: " + name)
+                .build());
     }
 
     @Override
     protected void onPause() {
         super.onPause();
+        AppEventsLogger.deactivateApp(this);
 
-        // Logs 'app deactivate' App Event.
+        String name = "Facebook Login Screen";
+
         mTracker.send(new HitBuilders.EventBuilder()
                 .setCategory("Action")
-                .setAction("Paused")
+                .setAction("App Paused on: " + name)
                 .build());
-        AppEventsLogger.deactivateApp(this);
+
     }
 
-
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
 
         PrimaryDrawerItem item1 = new PrimaryDrawerItem().withName("View People");
 
-        new DrawerBuilder()
+        Drawer result = new DrawerBuilder()
                 .withActivity(this)
-                .withTranslucentStatusBar(false)
-                .withActionBarDrawerToggle(false)
+                .withToolbar(toolbar)
+                .withRootView(R.id.drawer_layout)
+                .withActionBarDrawerToggle(true)
+                .withActionBarDrawerToggleAnimated(true)
                 .addDrawerItems(
                         //pass your items here
                         item1
@@ -194,24 +213,11 @@ public class MainActivity extends Activity {
                     }
                 })
                 .build();
+
+
         return true;
     }
 
-/*
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }*/
 
 
     /*
@@ -228,22 +234,4 @@ public class MainActivity extends Activity {
         Intent intent = new Intent(this, ViewPeopleActivity.class);
         startActivity(intent);
     }
-
-    /*
-        ========================== GEV =======================
-        This method will return true if facebook user is already logged in via facebook,
-        false otherwise
-     */
-    public boolean isLoggedIn() {
-        AccessToken accessToken = AccessToken.getCurrentAccessToken();
-        return accessToken != null;
-    }
-
-    /**
-     * Return the title of the currently displayed image.
-     * @return title of image
-     */
-
-
 }
-

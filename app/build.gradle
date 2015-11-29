@@ -4,7 +4,7 @@ apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    buildToolsVersion "23.0.2"
 
     defaultConfig {
         applicationId "com.gevdev.stalky"
@@ -21,24 +21,20 @@ android {
     }
 }
 
-repositories {
-    mavenCentral()
-}
-
-
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.facebook.android:facebook-android-sdk:4.6.0'
-    compile 'com.android.support:appcompat-v7:23.1.0'
-    compile 'com.android.support:support-v4:23.1.0'
-    compile group: 'org.apache.httpcomponents', name: 'httpclient-android', version: '4.3.5.1'
-    compile project(':volley')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.google.android.gms:play-services-analytics:8.3.0'
+    //Image Library Picasso
+    compile 'com.squareup.picasso:picasso:2.5.2'
     //Library for Side NavBar
-    compile('com.mikepenz:materialdrawer:4.4.6@aar') {
+    compile('com.mikepenz:materialdrawer:4.5.1@aar') {
         transitive = true
     }
-    //Google Analytics
-    compile 'com.google.android.gms:play-services-analytics:8.3.0'
-    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.facebook.android:facebook-android-sdk:4.6.0'
+    compile project(':volley')
+
 
 }
