@@ -2,9 +2,5 @@
     {
         "merged": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
         "source": "D:\\Android Studio Projects\\Stalky\\app\\src\\main\\res\\menu\\menu_main.xml"
-    },
-    {
-        "merged": "D:\\Android Studio Projects\\Redo\\Stalky\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
-        "source": "D:\\Android Studio Projects\\Redo\\Stalky\\app\\src\\main\\res\\menu\\menu_main.xml"
     }
 ]

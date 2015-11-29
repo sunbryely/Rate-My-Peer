@@ -29,7 +29,6 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
-import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -59,6 +58,7 @@ public class ViewPeopleActivity extends AppCompatActivity {
     private String searchedId;
     private static final String TAG = "ViewPeopleFragment";
     private Tracker mTracker;
+    Toolbar toolbar;
 
     private String[] SUGGESTIONS;
     private SimpleCursorAdapter mAdapter;
@@ -69,9 +69,9 @@ public class ViewPeopleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         nameList = new ArrayList<>();
 
-        getNames();
 
         String[] from = new String[]{"names"};
         final int[] to = new int[]{android.R.id.text1};
@@ -84,7 +84,7 @@ public class ViewPeopleActivity extends AppCompatActivity {
 
 
         setContentView(R.layout.user_profile_layout);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         AnalyticsApplication application = (AnalyticsApplication) getApplication();
@@ -143,7 +143,13 @@ public class ViewPeopleActivity extends AppCompatActivity {
 
                 });
 
+        jsonRequest.setRetryPolicy(new DefaultRetryPolicy(
+                50000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
         MemberServiceCenter.requestQueue.add(jsonRequest);
+
     }
 
     protected void updateUI(JSONObject obj) {
@@ -194,13 +200,12 @@ public class ViewPeopleActivity extends AppCompatActivity {
         searchView.setOnSuggestionListener(new SearchView.OnSuggestionListener() {
             @Override
             public boolean onSuggestionClick(int position) {
-                // Your code here
+                updateProfile("100006683413828");
                 return true;
             }
 
             @Override
             public boolean onSuggestionSelect(int position) {
-                // Your code here
                 return true;
             }
         });
@@ -215,35 +220,15 @@ public class ViewPeopleActivity extends AppCompatActivity {
 
                     @Override
                     public boolean onQueryTextChange(String newText) {
-                        populateAdapter(newText);
+                        if (newText.length() >= 3)
+                            getNames(newText);
 
-//                        String URL = String.format("http://54.149.222.140/user/%s", newText);
-//                        JsonObjectRequest jsonRequest = new JsonObjectRequest
-//                                (Request.Method.GET, URL, null, new Response.Listener<JSONObject>() {
-//                                    @Override
-//                                    public void onResponse(JSONObject jsonObject) {}
-//                                }, new Response.ErrorListener() {
-//                                    @Override
-//                                    public void onErrorResponse(VolleyError volleyError) {
-//                                        volleyError.printStackTrace();
-//                                    }
-//
-//                                });
-//
-//                        MemberServiceCenter.requestQueue.add(jsonRequest);
                         return false;
                     }
                 }
         );
 
-        new DrawerBuilder()
-                .withActivity(this)
-                .withTranslucentStatusBar(false)
-                .withActionBarDrawerToggle(false)
-                .addDrawerItems(
-                        //pass your items here
-                )
-                .build();
+
         return true;
     }
 
@@ -282,14 +267,15 @@ public class ViewPeopleActivity extends AppCompatActivity {
         mAdapter.changeCursor(c);
     }
 
-    private void getNames() {
-        String URL = ("http://54.149.222.140/user/_");
+    private void getNames(final String name) {
+        String URL = String.format("http://54.149.222.140/user/%s", name);
 
 
         JsonArrayRequest jsonRequest = new JsonArrayRequest(URL, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
                 addNames(response);
+                populateAdapter(name);
             }
         }, new Response.ErrorListener() {
             @Override
@@ -332,5 +318,32 @@ public class ViewPeopleActivity extends AppCompatActivity {
         Log.i("BOOGA", String.valueOf(nameList.size()));
 
         SUGGESTIONS = suggestions;
+    }
+
+    public void updateProfile(String userID) {
+        String imageURL = "https://graph.facebook.com/" + userID + "/picture?type=large";
+        Picasso.with(this).load(imageURL).into(profileImage);
+
+        String URL = String.format("http://54.149.222.140/users/%s", userID);
+        JsonObjectRequest jsonRequest = new JsonObjectRequest
+                (Request.Method.GET, URL, null, new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject jsonObject) {
+                        Log.e(TAG, "jsonObject = " + jsonObject.toString());
+                        updateUI(jsonObject);
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+                        volleyError.printStackTrace();
+                    }
+
+                });
+        MemberServiceCenter.requestQueue.add(jsonRequest);
+    }
+
+    private void onLogin() {
+        Intent intent = new Intent(this, ViewPeopleActivity.class);
+        startActivity(intent);
     }
 }
