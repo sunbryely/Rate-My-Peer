@@ -166,10 +166,11 @@ public class RateActivity extends AppCompatActivity {
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String URL = String.format("http://54.149.222.140/comments");
 
+                // add comment
+                String commentURL = String.format("http://54.149.222.140/comments");
                 JsonObjectRequest jsonRequest = new JsonObjectRequest
-                        (Request.Method.POST, URL, comment, new Response.Listener<JSONObject>() {
+                        (Request.Method.POST, commentURL, comment, new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject jsonObject) {
                                 Log.i("RESPONSE", "SUCCESS");
@@ -182,6 +183,23 @@ public class RateActivity extends AppCompatActivity {
                             }
                         });
                 MemberServiceCenter.requestQueue.add(jsonRequest);
+
+                // add rating
+                String ratingURL = String.format("http://54.149.222.140/ratings");
+                JsonObjectRequest jsonRequest2 = new JsonObjectRequest
+                        (Request.Method.POST, ratingURL, ratings, new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject jsonObject) {
+                                Log.i("RESPONSE", "SUCCESS");
+                            }
+                        }, new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError volleyError) {
+                                Log.i("RESPONSE", "FAILURE");
+                                volleyError.printStackTrace();
+                            }
+                        });
+                MemberServiceCenter.requestQueue.add(jsonRequest2);
             }
         });
     }
