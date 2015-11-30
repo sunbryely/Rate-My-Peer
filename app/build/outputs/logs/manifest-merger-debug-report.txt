@@ -1,184 +1,184 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:2:1-40:12
-	package
-		ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:3:5-32
-		INJECTED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml
-	android:versionName
-		INJECTED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml
+ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:2:1-40:12
 	xmlns:android
-		ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:2:11-69
+	package
+		ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:3:5-32
+		INJECTED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:5:5-67
-MERGED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:21:5-67
-MERGED from [com.google.android.gms:play-services-analytics:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.3.0/AndroidManifest.xml:21:5-67
+ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:5:5-67
+MERGED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:21:5-67
+MERGED from [com.google.android.gms:play-services-analytics:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.3.0/AndroidManifest.xml:21:5-67
 	android:name
-		ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:5:22-64
+		ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:6:5-79
-MERGED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:22:5-79
-MERGED from [com.google.android.gms:play-services-analytics:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.3.0/AndroidManifest.xml:22:5-79
+ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:6:5-79
+MERGED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.gms:play-services-analytics:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.3.0/AndroidManifest.xml:22:5-79
 	android:name
-		ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:6:22-76
+		ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:6:22-76
 application
-ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:8:5-38:19
-MERGED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:26:5-46:19
-MERGED from [com.google.android.gms:play-services-basement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-analytics:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.3.0/AndroidManifest.xml:24:5-20
-MERGED from [com.google.android.gms:play-services-basement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.facebook.android:facebook-android-sdk:4.6.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/AndroidManifest.xml:28:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:cardview-v7:23.0.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.0.1/AndroidManifest.xml:22:5-20
-MERGED from [Stalky:volley:unspecified] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/Stalky/volley/unspecified/AndroidManifest.xml:9:5-20
-	android:label
-		ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:12:9-41
+ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:8:5-38:19
+MERGED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:26:5-46:19
+MERGED from [com.google.android.gms:play-services-basement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-analytics:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.3.0/AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.facebook.android:facebook-android-sdk:4.6.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/AndroidManifest.xml:28:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:cardview-v7:23.0.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.0.1/AndroidManifest.xml:22:5-20
+MERGED from [Stalky:volley:unspecified] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/Stalky/volley/unspecified/AndroidManifest.xml:9:5-20
 	android:supportsRtl
-		ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:13:9-35
+		ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:13:9-35
+	android:label
+		ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:12:9-41
 	android:allowBackup
-		ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:10:9-35
 	android:icon
-		ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:11:9-43
+		ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:11:9-43
 	android:theme
-		ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:14:9-40
+		ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:14:9-40
 	android:name
-		ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:9:9-45
+		ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:9:9-45
 meta-data#com.facebook.sdk.ApplicationId
-ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:16:9-18:46
-	android:value
-		ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:18:13-43
+ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:16:9-18:46
 	android:name
-		ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:17:13-58
+		ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:17:13-58
+	android:value
+		ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:18:13-43
 activity#com.gevdev.stalky.MainActivity
-ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:20:9-29:20
+ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:20:9-29:20
 	android:label
-		ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:22:13-45
+		ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:22:13-45
 	android:theme
-		ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:23:13-56
+		ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:23:13-56
 	android:name
-		ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:21:13-41
+		ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:21:13-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:24:13-28:29
+ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:24:13-28:29
 action#android.intent.action.MAIN
-ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:25:17-69
+ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:25:17-69
 	android:name
-		ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:25:25-66
+		ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:25:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:27:17-77
+ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:27:17-77
 	android:name
-		ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:27:27-74
+		ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:27:27-74
 activity#com.facebook.FacebookActivity
-ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:30:9-33:75
+ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:30:9-33:75
 	android:label
-		ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:32:13-35
+		ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:32:13-35
 	android:theme
-		ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:33:13-72
+		ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:33:13-72
 	android:name
-		ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:31:13-57
+		ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:31:13-57
 activity#com.gevdev.stalky.ViewPeopleActivity
-ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:34:9-37:68
+ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:34:9-37:68
 	android:label
-		ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:36:13-63
+		ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:36:13-63
 	android:theme
-		ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:37:13-56
+		ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:37:13-56
 	android:name
-		ADDED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml:35:13-47
+		ADDED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml:35:13-47
 uses-sdk
-INJECTED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-basement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:design:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.google.android.gms:play-services-analytics:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.3.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-basement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.mikepenz:materialdrawer:4.5.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/4.5.1/AndroidManifest.xml:8:5-10:41
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.mikepenz:materialize:0.5.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.mikepenz/materialize/0.5.1/AndroidManifest.xml:8:5-10:41
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.mikepenz:iconics-core:2.2.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.mikepenz/iconics-core/2.2.0/AndroidManifest.xml:8:5-10:41
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.facebook.android:facebook-android-sdk:4.6.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/AndroidManifest.xml:24:5-26:41
-MERGED from [com.android.support:support-v4:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:cardview-v7:23.0.1] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.0.1/AndroidManifest.xml:20:5-43
-MERGED from [Stalky:volley:unspecified] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/Stalky/volley/unspecified/AndroidManifest.xml:7:5-43
+INJECTED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-analytics:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.3.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.mikepenz:materialdrawer:4.5.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/4.5.1/AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.mikepenz:materialize:0.5.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.mikepenz/materialize/0.5.1/AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.mikepenz:iconics-core:2.2.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.mikepenz/iconics-core/2.2.0/AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.facebook.android:facebook-android-sdk:4.6.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.6.0/AndroidManifest.xml:24:5-26:41
+MERGED from [com.android.support:support-v4:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:cardview-v7:23.0.1] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.0.1/AndroidManifest.xml:20:5-43
+MERGED from [Stalky:volley:unspecified] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/Stalky/volley/unspecified/AndroidManifest.xml:7:5-43
 	android:targetSdkVersion
-		INJECTED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/zhuchen/Documents/Stalky/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:24:5-67
+ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:24:5-67
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:24:22-65
+		ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:24:22-65
 provider#com.google.android.gms.measurement.AppMeasurementContentProvider
-ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:28:7-31:37
+ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:28:7-31:37
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:31:11-35
 	android:authorities
-		ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:29:11-76
-	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:31:11-35
+		ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:29:11-76
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:30:11-90
+		ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:30:11-90
 receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:33:7-39:18
+ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:33:7-39:18
 	android:enabled
-		ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:35:11-33
+		ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:35:11-33
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:34:11-83
+		ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:34:11-83
 intent-filter#com.google.android.gms.measurement.UPLOAD
-ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:36:9-38:25
+ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:36:9-38:25
 action#com.google.android.gms.measurement.UPLOAD
-ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:37:11-77
+ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:37:11-77
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:37:19-75
+		ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:37:19-75
 service#com.google.android.gms.measurement.AppMeasurementService
-ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:41:7-44:37
-	android:enabled
-		ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:43:11-33
+ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:41:7-44:37
 	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:44:11-35
+		ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:44:11-35
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:43:11-33
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:42:11-82
+		ADDED from [com.google.android.gms:play-services-measurement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-measurement/8.3.0/AndroidManifest.xml:42:11-82
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/AndroidManifest.xml:21:9-23:69
-	android:value
-		ADDED from [com.google.android.gms:play-services-basement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/AndroidManifest.xml:23:13-66
+ADDED from [com.google.android.gms:play-services-basement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/AndroidManifest.xml:21:9-23:69
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:8.3.0] /Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/AndroidManifest.xml:22:13-58
+		ADDED from [com.google.android.gms:play-services-basement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/AndroidManifest.xml:22:13-58
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:8.3.0] /Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/AndroidManifest.xml:23:13-66

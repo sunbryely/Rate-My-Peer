@@ -2,5 +2,9 @@
     {
         "merged": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
         "source": "/Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/res/menu/menu_main.xml"
+    },
+    {
+        "merged": "/Users/zhuchen/Documents/Stalky/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
+        "source": "/Users/zhuchen/Documents/Stalky/app/src/main/res/menu/menu_main.xml"
     }
 ]

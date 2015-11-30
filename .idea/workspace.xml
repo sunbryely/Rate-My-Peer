@@ -23,98 +23,124 @@
     </layouts>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="System" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="DEBUG" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b77cf3e2-27a7-4528-b227-f10aa5bfc02a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.0_589538ad088331b447c45715e56a5399bf43e52f.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/picasso-2.5.2_3d73f28f7debe7df345358448894e8c044699b09.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1_7c3d3f95d8ab53d18f101dcf68ec97190430e6fc.jar" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/empty_star.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/full_star.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/half_star.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/triton.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ucsdtritonslogo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values/drawable.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/rating_bar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/AnalyticsApplication.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/AnalyticsApplication.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/AndroidAuthenticator.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/AndroidAuthenticator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/AndroidAuthenticator.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/AndroidAuthenticator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/BasicNetwork.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/BasicNetwork.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/BasicNetwork.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/BasicNetwork.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/ByteArrayPool$1.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/ByteArrayPool$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/ByteArrayPool$1.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/ByteArrayPool$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/ByteArrayPool.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/ByteArrayPool.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/ByteArrayPool.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/ByteArrayPool.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/CacheDispatcher$1.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/CacheDispatcher$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/CacheDispatcher$1.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/CacheDispatcher$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/CacheDispatcher.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/CacheDispatcher.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/CacheDispatcher.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/CacheDispatcher.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/ClearCacheRequest.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/ClearCacheRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/ClearCacheRequest.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/ClearCacheRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/DefaultRetryPolicy.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/DefaultRetryPolicy.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/DefaultRetryPolicy.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/DefaultRetryPolicy.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/DiskBasedCache$1.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/DiskBasedCache$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/DiskBasedCache$1.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/DiskBasedCache$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/DiskBasedCache$CacheHeader.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/DiskBasedCache$CacheHeader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/DiskBasedCache$CacheHeader.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/DiskBasedCache$CacheHeader.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/DiskBasedCache$CountingInputStream.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/DiskBasedCache$CountingInputStream.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/DiskBasedCache$CountingInputStream.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/DiskBasedCache$CountingInputStream.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/DiskBasedCache.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/DiskBasedCache.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/DiskBasedCache.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/DiskBasedCache.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/ExecutorDelivery$1.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/ExecutorDelivery$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/ExecutorDelivery$1.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/ExecutorDelivery$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/ExecutorDelivery.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/ExecutorDelivery.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/ExecutorDelivery.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/ExecutorDelivery.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/HttpClientStack$HttpPatch.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/HttpClientStack$HttpPatch.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/HttpClientStack$HttpPatch.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/HttpClientStack$HttpPatch.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/HttpClientStack.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/HttpClientStack.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/HttpClientStack.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/HttpClientStack.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/HttpHeaderParser.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/HttpHeaderParser.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/HttpHeaderParser.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/HttpHeaderParser.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/HurlStack.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/HurlStack.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/HurlStack.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/HurlStack.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/ImageLoader$1.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/ImageLoader$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/ImageLoader$1.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/ImageLoader$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/ImageLoader$2.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/ImageLoader$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/ImageLoader$2.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/ImageLoader$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/ImageLoader$3.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/ImageLoader$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/ImageLoader$3.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/ImageLoader$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/ImageLoader$4.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/ImageLoader$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/ImageLoader$4.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/ImageLoader$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/ImageLoader$ImageContainer.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/ImageLoader$ImageContainer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/ImageLoader$ImageContainer.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/ImageLoader$ImageContainer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/ImageLoader.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/ImageLoader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/ImageLoader.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/ImageLoader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/ImageRequest.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/ImageRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/ImageRequest.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/ImageRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/JsonArrayRequest.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/JsonArrayRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/JsonArrayRequest.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/JsonArrayRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/JsonObjectRequest.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/JsonObjectRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/JsonObjectRequest.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/JsonObjectRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/JsonRequest.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/JsonRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/JsonRequest.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/JsonRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/MainActivity$1$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/MainActivity$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/MainActivity$1$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/MainActivity$1$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/MainActivity$1$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/MainActivity$1$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/MainActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/MainActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/MainActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/MainActivity$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/MainActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/NetworkDispatcher.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/NetworkDispatcher.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/NetworkDispatcher.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/NetworkDispatcher.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/analytics/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/analytics/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/measurement/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/measurement/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialdrawer/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialdrawer/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialize/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialize/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$bool.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$bool.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialdrawer/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialdrawer/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialize/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialize/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialdrawer/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialdrawer/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialize/R$dimen.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialize/R$dimen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/NetworkImageView$1$1.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/NetworkImageView$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/NetworkImageView$1$1.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/NetworkImageView$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/NetworkImageView$1.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/NetworkImageView$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/NetworkImageView$1.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/NetworkImageView$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/NetworkImageView.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/NetworkImageView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/NetworkImageView.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/NetworkImageView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/NetworkResponse.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/NetworkResponse.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/NetworkResponse.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/NetworkResponse.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/PoolingByteArrayOutputStream.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/PoolingByteArrayOutputStream.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/PoolingByteArrayOutputStream.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/PoolingByteArrayOutputStream.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$drawable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$drawable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$drawable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialdrawer/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialdrawer/R$drawable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialize/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialize/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialdrawer/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialdrawer/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialize/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialize/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$integer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialdrawer/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialdrawer/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialize/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialize/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$menu.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$mipmap.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$mipmap.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$raw.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$raw.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialdrawer/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialdrawer/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialize/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialize/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/analytics/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/analytics/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/measurement/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/measurement/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/iconics/core/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialdrawer/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialdrawer/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialize/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mikepenz/materialize/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$xml.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R$xml.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/R.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/Request$1.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/Request$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/Request$1.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/Request$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/Request$Priority.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/Request$Priority.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/Request$Priority.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/Request$Priority.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/Request.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/Request.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/Request.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/Request.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/RequestQueue$1.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/RequestQueue$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/RequestQueue$1.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/RequestQueue$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/RequestQueue.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/RequestQueue.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/RequestQueue.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/RequestQueue.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/StringRequest.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/StringRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/StringRequest.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/StringRequest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/ViewPeopleActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/ViewPeopleActivity$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/ViewPeopleActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/ViewPeopleActivity$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/ViewPeopleActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/ViewPeopleActivity$3.class" />
@@ -124,6 +150,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/ViewPeopleActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gevdev/stalky/ViewPeopleActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/Volley.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/toolbox/Volley.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/Volley.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/toolbox/Volley.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/VolleyLog$MarkerLog.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/VolleyLog$MarkerLog.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/VolleyLog$MarkerLog.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/VolleyLog$MarkerLog.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/VolleyLog.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/debug/com/android/volley/VolleyLog.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/VolleyLog.class" afterPath="$PROJECT_DIR$/volley/build/intermediates/classes/release/com/android/volley/VolleyLog.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" />
@@ -143,23 +173,18 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/build/outputs/aar/volley-release.aar" afterPath="$PROJECT_DIR$/volley/build/outputs/aar/volley-release.aar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/recyclerview/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/recyclerview/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/facebook/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/facebook/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/gevdev/stalky/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/gevdev/stalky/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/analytics/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/analytics/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/measurement/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/measurement/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/mikepenz/iconics/core/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/mikepenz/iconics/core/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/mikepenz/materialdrawer/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/mikepenz/materialdrawer/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/mikepenz/materialize/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/mikepenz/materialize/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/gevdev/stalky/ViewPeopleActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/gevdev/stalky/ViewPeopleActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/anim.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/anim.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_1_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/color-v11.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/color-v11.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/color-v23.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/color-v23.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/color.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/color.json" />
@@ -180,15 +205,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxxhdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxxhdpi-v4.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/facebook_android_sdk_4_6_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/facebook_android_sdk_4_6_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout-sw600dp-v13.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout-sw600dp-v13.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/materialdrawer_4_5_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/materialdrawer_4_5_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/materialize_0_5_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/materialize_0_5_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/menu.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/menu.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/menu/menu_main.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/menu/menu_main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAndroidTestAssets/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAndroidTestAssets/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
@@ -207,12 +229,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/mipmap-xhdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/mipmap-xhdpi-v4.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/mipmap-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/mipmap-xxhdpi-v4.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/mipmap-xxxhdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/mipmap-xxxhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_measurement_8_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_measurement_8_3_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/raw.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/raw.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_23_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_23_1_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_1_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_23_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_23_1_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/user_profile_layout.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/user_profile_layout.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-af.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-af.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-am.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-am.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ar.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-ar.json" />
@@ -329,8 +349,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-zh-rTW.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-zh-rTW.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-zu.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-zu.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/volley/volley.iml" afterPath="$PROJECT_DIR$/volley/volley.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/xml.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/xml.json" />
     </list>
@@ -364,7 +382,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gevdev/stalky/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="202" column="47" selection-start-line="202" selection-start-column="47" selection-end-line="202" selection-end-column="47" />
+              <caret line="98" column="20" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
               <folding>
                 <element signature="e#7943#8537#0" expanded="true" />
                 <element signature="e#8536#8537#0" expanded="true" />
@@ -379,12 +397,19 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="187" column="0" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5176#5474#0" expanded="true" />
-                <element signature="e#5473#5474#0" expanded="true" />
-                <element signature="e#5476#5707#0" expanded="true" />
-                <element signature="e#5706#5707#0" expanded="true" />
+                <element signature="e#12577#12808#0" expanded="true" />
+                <element signature="e#12807#12808#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rating_bar.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/rating_bar.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -395,38 +420,56 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-29.344828">
-              <caret line="191" column="0" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.4827585">
+              <caret line="184" column="50" selection-start-line="184" selection-start-column="50" selection-end-line="184" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RecyclerViewAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/adapter/RecyclerViewAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.5925926">
-              <caret line="63" column="74" selection-start-line="63" selection-start-column="74" selection-end-line="63" selection-end-column="74" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3759#3760#0" expanded="true" />
-                <element signature="e#3794#3795#0" expanded="true" />
-              </folding>
-            </state>
+      <file leaf-file-name="ucsdtritonslogo.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ucsdtritonslogo.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list_comment.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_comment.xml">
+      <file leaf-file-name="triton.png" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/triton.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
           <provider editor-type-id="android-designer">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0955414">
-              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-              <folding>
-                <element signature="e#934#958#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-6.724138">
+              <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/settings.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -436,8 +479,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="layoutResourceFile_vertical" />
         <option value="Class" />
+        <option value="layoutResourceFile_vertical" />
+        <option value="valueResourceFile" />
       </list>
     </option>
   </component>
@@ -461,12 +505,12 @@
                 <option name="path" value="$PROJECT_DIR$/app" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
-                <option name="name" value=":volley" />
-                <option name="path" value="$PROJECT_DIR$/volley" />
-              </ExternalProjectPojo>
-              <ExternalProjectPojo>
                 <option name="name" value="Stalky" />
                 <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value=":volley" />
+                <option name="path" value="$PROJECT_DIR$/volley" />
               </ExternalProjectPojo>
             </list>
           </value>
@@ -2373,7 +2417,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="7243289849000" />
+        <entry key="$PROJECT_DIR$" value="7243219060000" />
         <entry key="D:\Android Studio Projects\Stalky" value="7243607142651" />
       </map>
     </option>
@@ -2616,21 +2660,21 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/external/lombok/lombok-ast/0.2.3/lombok-ast-0.2.3.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.abego.treelayout/org.abego.treelayout.core/1.0.1/6e1dd6f6efdb453c7b8ba35726c63fbf50cd7142/org.abego.treelayout.core-1.0.1-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.abego.treelayout/org.abego.treelayout.core/1.0.1/e31e79cba7a5414cf18fa69f3f0a2cf9ee997b61/org.abego.treelayout.core-1.0.1.jar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-measurement/8.3.0/play-services-measurement-8.3.0.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/appcompat-v7/23.1.1/appcompat-v7-23.1.1.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/design/23.1.1/design-23.1.1.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-analytics/8.3.0/play-services-analytics-8.3.0.aar" />
+                            <option value="$USER_HOME$/Downloads/2015 summer intern/adt-bundle-mac-x86_64-20140321/sdk/extras/google/m2repository/com/google/android/gms/play-services-measurement/8.3.0/play-services-measurement-8.3.0.aar" />
+                            <option value="$USER_HOME$/Downloads/2015 summer intern/adt-bundle-mac-x86_64-20140321/sdk/extras/android/m2repository/com/android/support/appcompat-v7/23.1.1/appcompat-v7-23.1.1.aar" />
+                            <option value="$USER_HOME$/Downloads/2015 summer intern/adt-bundle-mac-x86_64-20140321/sdk/extras/android/m2repository/com/android/support/design/23.1.1/design-23.1.1.aar" />
+                            <option value="$USER_HOME$/Downloads/2015 summer intern/adt-bundle-mac-x86_64-20140321/sdk/extras/google/m2repository/com/google/android/gms/play-services-analytics/8.3.0/play-services-analytics-8.3.0.aar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mikepenz/materialdrawer/4.5.1/f4d43ec5b29a5dc6730fa21635114fb63d2974b2/materialdrawer-4.5.1.aar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.android/facebook-android-sdk/4.6.0/67726a31ed265d73e4de3970339c444ef3878a11/facebook-android-sdk-4.6.0.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/cardview-v7/23.0.1/cardview-v7-23.0.1.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/google/m2repository/com/google/android/gms/play-services-basement/8.3.0/play-services-basement-8.3.0.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/23.1.1/support-v4-23.1.1.aar" />
+                            <option value="$USER_HOME$/Downloads/2015 summer intern/adt-bundle-mac-x86_64-20140321/sdk/extras/android/m2repository/com/android/support/cardview-v7/23.0.1/cardview-v7-23.0.1.aar" />
+                            <option value="$USER_HOME$/Downloads/2015 summer intern/adt-bundle-mac-x86_64-20140321/sdk/extras/google/m2repository/com/google/android/gms/play-services-basement/8.3.0/play-services-basement-8.3.0.aar" />
+                            <option value="$USER_HOME$/Downloads/2015 summer intern/adt-bundle-mac-x86_64-20140321/sdk/extras/android/m2repository/com/android/support/support-v4/23.1.1/support-v4-23.1.1.aar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mikepenz/materialize/0.5.1/a77af33caec2ca288f328bf2e2ea10e123338d3/materialize-0.5.1.aar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar" />
+                            <option value="$USER_HOME$/Downloads/2015 summer intern/adt-bundle-mac-x86_64-20140321/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mikepenz/iconics-core/2.2.0/a2dcc5704d331a0783bff41ae8a20adbff4220f7/iconics-core-2.2.0.aar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.2.0/6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd/bolts-android-1.2.0.jar" />
-                            <option value="$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/recyclerview-v7/23.1.1/recyclerview-v7-23.1.1.aar" />
+                            <option value="$USER_HOME$/Downloads/2015 summer intern/adt-bundle-mac-x86_64-20140321/sdk/extras/android/m2repository/com/android/support/recyclerview-v7/23.1.1/recyclerview-v7-23.1.1.aar" />
                           </list>
                         </option>
                         <option name="path" value="$PROJECT_DIR$/app" />
@@ -2781,11 +2825,16 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/gevdev/stalky/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/bean/Comment.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/gevdev/stalky/ViewPeopleActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/adapter/FullyLinearLayoutManager.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/adapter/RecyclerViewAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_view_people.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/list_comment.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/gevdev/stalky/ViewPeopleActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/rating_bar.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/rating_bar.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/drawable.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/rating_bar.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_view_people.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
       </list>
     </option>
   </component>
@@ -2800,10 +2849,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="12" />
-    <option name="y" value="49" />
+    <option name="x" value="-67" />
+    <option name="y" value="556" />
     <option name="width" value="1142" />
-    <option name="height" value="724" />
+    <option name="height" value="713" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -2850,7 +2899,29 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Stalky" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Stalky" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2993,7 +3064,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="menu" />
+              <option name="myItemId" value="mipmap-hdpi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -3049,41 +3120,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Stalky" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Stalky" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stalky" />
+              <option name="myItemId" value="drawable" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -3111,62 +3152,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bean" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Stalky" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Stalky" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="adapter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Stalky" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gradle Scripts" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Stalky" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -3180,11 +3165,21 @@
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.WIDTH" value="240" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Redo/Tesssst" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.56.101:5555" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_22_x86" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="4.0" />
+    <property name="android.project.structure.last.selected" value="app" />
+    <property name="android.project.structure.proportion" value="0.15" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="adapter" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.app">
@@ -3391,39 +3386,39 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="12" y="49" width="1142" height="724" extended-state="0" />
-    <editor active="true" />
+    <frame x="-67" y="556" width="1142" height="713" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34539473" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19909091" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.48545456" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.51454544" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32663316" sideWeight="0.48181817" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19909091" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -3444,6 +3439,39 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gevdev/stalky/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#7943#8537#0" expanded="true" />
+            <element signature="e#8536#8537#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gevdev/stalky/ViewPeopleActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="187" column="0" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
+          <folding>
+            <element signature="e#12577#12808#0" expanded="true" />
+            <element signature="e#12807#12808#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_view_people.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="191" column="0" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -3482,11 +3510,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5176#5474#0" expanded="true" />
-            <element signature="e#5473#5474#0" expanded="true" />
-            <element signature="e#5476#5707#0" expanded="true" />
-            <element signature="e#5706#5707#0" expanded="true" />
+            <element signature="e#12577#12808#0" expanded="true" />
+            <element signature="e#12807#12808#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3523,11 +3548,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5176#5474#0" expanded="true" />
-            <element signature="e#5473#5474#0" expanded="true" />
-            <element signature="e#5476#5707#0" expanded="true" />
-            <element signature="e#5706#5707#0" expanded="true" />
+            <element signature="e#12577#12808#0" expanded="true" />
+            <element signature="e#12807#12808#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3556,11 +3578,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5176#5474#0" expanded="true" />
-            <element signature="e#5473#5474#0" expanded="true" />
-            <element signature="e#5476#5707#0" expanded="true" />
-            <element signature="e#5706#5707#0" expanded="true" />
+            <element signature="e#12577#12808#0" expanded="true" />
+            <element signature="e#12807#12808#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3589,13 +3608,6 @@
         <state vertical-scroll-proportion="-3.148148">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="64" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -3629,17 +3641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0344827">
-          <caret line="17" column="41" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gevdev/stalky/AnalyticsApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27631578">
@@ -3651,34 +3652,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/bean/Comment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35526314">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/recyclerview-v7/23.1.1/recyclerview-v7-23.1.1-sources.jar!/android/support/v7/widget/RecyclerView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="8632" column="0" selection-start-line="8632" selection-start-column="0" selection-end-line="8632" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.527027">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="37" column="51" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gevdev/stalky/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="98" column="20" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
+          <folding>
+            <element signature="e#7943#8537#0" expanded="true" />
+            <element signature="e#8536#8537#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/drawable.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04464286">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -3688,32 +3684,41 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1034484">
+        <state vertical-scroll-proportion="1.0329342">
           <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/adapter/FullyLinearLayoutManager.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/full_star.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/empty_star.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gevdev/stalky/ViewPeopleActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.9324324">
-          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="187" column="0" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#545#546#0" expanded="true" />
+            <element signature="e#12577#12808#0" expanded="true" />
+            <element signature="e#12807#12808#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gevdev/stalky/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/rating_bar.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="202" column="47" selection-start-line="202" selection-start-column="47" selection-end-line="202" selection-end-column="47" />
-          <folding>
-            <element signature="e#7943#8537#0" expanded="true" />
-            <element signature="e#8536#8537#0" expanded="true" />
-          </folding>
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3722,49 +3727,47 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-29.344828">
-          <caret line="191" column="0" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
+        <state vertical-scroll-proportion="-4.4827585">
+          <caret line="184" column="50" selection-start-line="184" selection-start-column="50" selection-end-line="184" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/gevdev/stalky/ViewPeopleActivity.java">
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="187" column="0" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5176#5474#0" expanded="true" />
-            <element signature="e#5473#5474#0" expanded="true" />
-            <element signature="e#5476#5707#0" expanded="true" />
-            <element signature="e#5706#5707#0" expanded="true" />
-          </folding>
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/adapter/RecyclerViewAdapter.java">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5925926">
-          <caret line="63" column="74" selection-start-line="63" selection-start-column="74" selection-end-line="63" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3759#3760#0" expanded="true" />
-            <element signature="e#3794#3795#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_comment.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0955414">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="e#934#958#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-6.724138">
+          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+          <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ucsdtritonslogo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/triton.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
   </component>

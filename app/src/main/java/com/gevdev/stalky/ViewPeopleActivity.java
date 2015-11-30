@@ -187,14 +187,16 @@ public class ViewPeopleActivity extends AppCompatActivity {
             funStar.setRating(Float.parseFloat(funScore));
 
             JSONArray commentsArray = obj.getJSONArray("comments");
+            commentsList.clear();
             for (int i = 0; i < commentsArray.length(); i++) {
                 Comment cur = new Comment();
                 cur.comment = commentsArray.getJSONObject(i).getString("comment");
                 cur.user_id_from = commentsArray.getJSONObject(i).getString("user_id_from");
                 cur.updated_at = commentsArray.getJSONObject(i).getString("updated_at");
                 commentsList.add(cur);
-            }
 
+            }
+            System.out.println("size " + commentsList.size());
             recyclerViewAdapter.setItems(commentsList);
 
         } catch (JSONException e) {

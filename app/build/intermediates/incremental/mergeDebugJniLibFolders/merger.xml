@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/kelsiedong/Documents/Project/190/Stalky/app/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/Users/kelsiedong/Documents/Project/190/Stalky/app/src/debug/jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/zhuchen/Documents/Stalky/app/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/Users/zhuchen/Documents/Stalky/app/src/debug/jniLibs"/></dataSet></merger>
