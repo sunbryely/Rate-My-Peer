@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -11,12 +12,24 @@ import android.widget.EditText;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.Calendar;
+
+import Service.MemberServiceCenter;
 
 public class RateActivity extends AppCompatActivity {
 
@@ -37,6 +50,9 @@ public class RateActivity extends AppCompatActivity {
     private float teamStars;
     private float funStars;
 
+    JSONObject ratings = new JSONObject();
+
+
     private Tracker mTracker;
     private Toolbar toolbar;
 
@@ -47,13 +63,16 @@ public class RateActivity extends AppCompatActivity {
         AnalyticsApplication application = (AnalyticsApplication) getApplication();
         mTracker = application.getDefaultTracker();
 
-        addListenerOnRatingBar();
-        addSubmitListener();
-
         setContentView(R.layout.rate_activity_layout);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        addListenerOnRatingBar();
+        try {
+            addSubmitListener();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     public void addListenerOnRatingBar(){
@@ -66,6 +85,11 @@ public class RateActivity extends AppCompatActivity {
         skillsValue = (TextView) findViewById(R.id.skills_score);
         teamValue = (TextView) findViewById(R.id.teamwork_score);
         funValue = (TextView) findViewById(R.id.funfactor_score);
+
+
+
+
+
 
         //set listener for friend ratings bar
         friendRatingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
@@ -115,17 +139,61 @@ public class RateActivity extends AppCompatActivity {
     }
 
     //Listen for click on submit button
-    public void addSubmitListener(){
+    public void addSubmitListener() throws JSONException {
 
         // get comment section
         comments = (EditText) findViewById(R.id.editText);
         submitBtn = (Button) findViewById(R.id.submit_btn);
 
+
+        ratings.put("friendliness", friendStars);
+        ratings.put("skill", skillsStars);
+        ratings.put("teamwork", teamStars);
+        ratings.put("funcactor", funStars);
+
+
+        JSONArray array = new JSONArray();
+        JSONObject comment = new JSONObject();
+        JSONObject arrayObj = new JSONObject();
+        arrayObj.put("user_id_from", "10207858735896290");
+        arrayObj.put("user_id_to", "100006683413828");
+        arrayObj.put("comment", comments);
+        Calendar cal = Calendar.getInstance();
+        int seconds = cal.get(Calendar.SECOND);
+        arrayObj.put("updated_at", String.valueOf(cal));
+        array.put(arrayObj);
+        comment.put("comments", array);
+
+        final JSONObject jsonObject = new JSONObject();
+        final JSONObject rating = new JSONObject();
+        jsonObject.put("friendliness", friendStars);
+        jsonObject.put("skill", skillsStars);
+        jsonObject.put("teamwork", teamStars);
+        jsonObject.put("funcactor", funStars);
+        rating.put("facebook_id", "10208046193809664");
+        rating.put("ratings", jsonObject);
+
+
         //submit the rating
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String URL = String.format("http://54.149.222.140/users/%s", "10208046193809664");
 
+                JsonObjectRequest jsonRequest = new JsonObjectRequest
+                        (Request.Method.GET, URL, ratings, new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject jsonObject) {
+                                Log.i("RESPONSE", "SUCCESS");
+                            }
+                        }, new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError volleyError) {
+                                Log.i("RESPONSE", "FAILURE");
+                                volleyError.printStackTrace();
+                            }
+                        });
+                MemberServiceCenter.requestQueue.add(jsonRequest);
             }
         });
     }
