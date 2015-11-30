@@ -51,6 +51,7 @@ public class RateActivity extends AppCompatActivity {
     private float funStars;
 
     JSONObject ratings = new JSONObject();
+    JSONObject comment = new JSONObject();
 
 
     private Tracker mTracker;
@@ -85,10 +86,6 @@ public class RateActivity extends AppCompatActivity {
         skillsValue = (TextView) findViewById(R.id.skills_score);
         teamValue = (TextView) findViewById(R.id.teamwork_score);
         funValue = (TextView) findViewById(R.id.funfactor_score);
-
-
-
-
 
 
         //set listener for friend ratings bar
@@ -151,18 +148,9 @@ public class RateActivity extends AppCompatActivity {
         ratings.put("teamwork", teamStars);
         ratings.put("funcactor", funStars);
 
-
-        JSONArray array = new JSONArray();
-        JSONObject comment = new JSONObject();
-        JSONObject arrayObj = new JSONObject();
-        arrayObj.put("user_id_from", "10207858735896290");
-        arrayObj.put("user_id_to", "100006683413828");
-        arrayObj.put("comment", comments);
-        Calendar cal = Calendar.getInstance();
-        int seconds = cal.get(Calendar.SECOND);
-        arrayObj.put("updated_at", String.valueOf(cal));
-        array.put(arrayObj);
-        comment.put("comments", array);
+        comment.put("user_id_from", "10153269447328549");
+        comment.put("user_id_to", "100006683413828");
+        comment.put("comment", comments.getText().toString());
 
         final JSONObject jsonObject = new JSONObject();
         final JSONObject rating = new JSONObject();
@@ -170,7 +158,7 @@ public class RateActivity extends AppCompatActivity {
         jsonObject.put("skill", skillsStars);
         jsonObject.put("teamwork", teamStars);
         jsonObject.put("funcactor", funStars);
-        rating.put("facebook_id", "10208046193809664");
+        rating.put("facebook_id", "10153269447328549");
         rating.put("ratings", jsonObject);
 
 
@@ -178,10 +166,10 @@ public class RateActivity extends AppCompatActivity {
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String URL = String.format("http://54.149.222.140/users/%s", "10208046193809664");
+                String URL = String.format("http://54.149.222.140/comments");
 
                 JsonObjectRequest jsonRequest = new JsonObjectRequest
-                        (Request.Method.GET, URL, ratings, new Response.Listener<JSONObject>() {
+                        (Request.Method.POST, URL, comment, new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject jsonObject) {
                                 Log.i("RESPONSE", "SUCCESS");
