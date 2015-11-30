@@ -43,7 +43,8 @@
                     android:id="@+id/rate_btn"
                     android:text="@string/rate"
                     android:textSize="22sp"
-                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center_horizontal"
                     />
             </LinearLayout>
         </LinearLayout>
@@ -63,15 +64,17 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="44dp"
                 android:layout_height="wrap_content"
                 android:text=""
                 android:textSize="22sp"
                 android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
                 android:id="@+id/friendliness_score"
                 android:layout_gravity="center_vertical|left" />
 
             <RatingBar
+                android:progressDrawable="@drawable/rating_bar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/friendliness_rating"
@@ -94,15 +97,16 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="44dp"
                 android:layout_height="wrap_content"
                 android:text=""
                 android:textSize="22sp"
                 android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
                 android:id="@+id/skills_score"
                 android:layout_gravity="center_vertical|left" />
 
-            <RatingBar
+            <RatingBar android:progressDrawable="@drawable/rating_bar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/skills_rating"
@@ -125,15 +129,16 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="44dp"
                 android:layout_height="wrap_content"
                 android:text=""
                 android:textSize="22sp"
                 android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
                 android:id="@+id/teamwork_score"
                 android:layout_gravity="center_vertical|left" />
 
-            <RatingBar
+            <RatingBar android:progressDrawable="@drawable/rating_bar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/teamwork_rating"
@@ -157,15 +162,16 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="44dp"
                 android:layout_height="wrap_content"
                 android:text=""
                 android:textSize="22sp"
                 android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
                 android:id="@+id/funfactor_score"
                 android:layout_gravity="center_vertical|left" />
 
-            <RatingBar
+            <RatingBar android:progressDrawable="@drawable/rating_bar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/funfactor_rating"
@@ -180,12 +186,16 @@
             android:text="@string/Comments"
             android:textSize="22sp"
             android:id="@+id/textView" />
-        <ListView
-            android:nestedScrollingEnabled="true"
+
+
+        <android.support.v7.widget.RecyclerView
+            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="250dip"
+            android:layout_height="wrap_content"
             android:id="@+id/list"
-            android:layout_gravity="center_horizontal" />
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
     </LinearLayout>
 
 </ScrollView>

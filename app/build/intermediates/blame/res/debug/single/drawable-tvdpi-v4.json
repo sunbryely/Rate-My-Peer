@@ -1,6 +1,10 @@
 [
     {
-        "merged": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\res\\merged\\debug\\drawable-tvdpi-v4\\common_full_open_on_phone.png",
-        "source": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-basement\\8.3.0\\res\\drawable-tvdpi\\common_full_open_on_phone.png"
+        "merged": "/Users/zhuchen/Documents/Stalky/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_full_open_on_phone.png",
+        "source": "/Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/drawable-tvdpi/common_full_open_on_phone.png"
+    },
+    {
+        "merged": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/res/merged/debug/drawable-tvdpi-v4/common_full_open_on_phone.png",
+        "source": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.3.0/res/drawable-tvdpi/common_full_open_on_phone.png"
     }
 ]

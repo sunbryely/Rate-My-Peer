@@ -8,9 +8,9 @@ package com.google.android.gms;
 
 public final class R {
 	public static final class attr {
-		public static final int circleCrop = 0x7f010067;
-		public static final int imageAspectRatio = 0x7f010066;
-		public static final int imageAspectRatioAdjust = 0x7f010065;
+		public static final int circleCrop = 0x7f010072;
+		public static final int imageAspectRatio = 0x7f010071;
+		public static final int imageAspectRatioAdjust = 0x7f010070;
 	}
 	public static final class color {
 	}
@@ -69,7 +69,7 @@ public final class R {
 	public static final class style {
 	}
 	public static final class styleable {
-		public static final int[] LoadingImageView = { 0x7f010065, 0x7f010066, 0x7f010067 };
+		public static final int[] LoadingImageView = { 0x7f010070, 0x7f010071, 0x7f010072 };
 		public static final int LoadingImageView_circleCrop = 2;
 		public static final int LoadingImageView_imageAspectRatio = 1;
 		public static final int LoadingImageView_imageAspectRatioAdjust = 0;

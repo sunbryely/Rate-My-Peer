@@ -1,6 +1,10 @@
 [
     {
-        "merged": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\res\\merged\\debug\\raw\\gtm_analytics",
-        "source": "D:\\Android Studio Projects\\Stalky\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-analytics\\8.3.0\\res\\raw\\gtm_analytics"
+        "merged": "/Users/zhuchen/Documents/Stalky/app/build/intermediates/res/merged/debug/raw/gtm_analytics",
+        "source": "/Users/zhuchen/Documents/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.3.0/res/raw/gtm_analytics"
+    },
+    {
+        "merged": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/res/merged/debug/raw/gtm_analytics",
+        "source": "/Users/kelsiedong/Documents/Project/190/Stalky/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.3.0/res/raw/gtm_analytics"
     }
 ]
