@@ -185,7 +185,7 @@ public class RateActivity extends AppCompatActivity {
                 MemberServiceCenter.requestQueue.add(jsonRequest);
 
                 // add rating
-                String ratingURL = String.format("http://54.149.222.140/ratings");
+                String ratingURL = String.format("http://54.149.222.140/rate/%s", "100006683413828");
                 JsonObjectRequest jsonRequest2 = new JsonObjectRequest
                         (Request.Method.POST, ratingURL, ratings, new Response.Listener<JSONObject>() {
                             @Override
