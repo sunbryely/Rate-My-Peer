@@ -69,6 +69,8 @@ public class ViewPeopleActivity extends AppCompatActivity {
     private Tracker mTracker;
     Toolbar toolbar;
 
+    public static String viewID; //ID of the person who's profile we are looking at
+
     RecyclerView recyclerView;
     RecyclerViewAdapter recyclerViewAdapter;
 
@@ -395,6 +397,7 @@ public class ViewPeopleActivity extends AppCompatActivity {
         for(int i = 0; i<nameList.size(); i++) {
             if(name.equals(nameList.get(i)[0])) {
                 userID = nameList.get(i)[1];
+                viewID = userID;
                 break;
             }
         }
