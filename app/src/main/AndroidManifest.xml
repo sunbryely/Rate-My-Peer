@@ -53,6 +53,10 @@
         <activity
             android:name=".RateActivity"
             android:label="@string/title_activity_rate"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RankingsActivity"
+            android:label="@string/title_activity_rankings"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
