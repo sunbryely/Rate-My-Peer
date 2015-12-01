@@ -134,7 +134,7 @@ public class ViewPeopleActivity extends AppCompatActivity {
         rateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ViewPeopleActivity.this, RateActivity.class));
+                startActivityForResult(new Intent(ViewPeopleActivity.this, RateActivity.class), 1);
             }
         });
 
@@ -179,6 +179,13 @@ public class ViewPeopleActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (requestCode) {
+            case 1:
+                finish();
+        }
+    }
     protected void updateUI(JSONObject obj) {
         try {
             JSONObject ratingObj = obj.getJSONObject("ratings");
