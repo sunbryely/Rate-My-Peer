@@ -69,7 +69,7 @@ public class ViewPeopleActivity extends AppCompatActivity {
     private Tracker mTracker;
     Toolbar toolbar;
 
-    public static String viewID; //ID of the person who's profile we are looking at
+    public static String viewID = ""; //ID of the person who's profile we are looking at
 
     RecyclerView recyclerView;
     RecyclerViewAdapter recyclerViewAdapter;
@@ -145,14 +145,16 @@ public class ViewPeopleActivity extends AppCompatActivity {
         name.setText(profileName);
         String searchedId = intent.getStringExtra("searchedId");
 
-        String userID = "me";
-        String imageURL = "https://graph.facebook.com/" + MainActivity.myID + "/picture?type=large";
+        String userID = "";
+        if(viewID.equals("")) userID = MainActivity.myID;
+        else                  userID = viewID;
+        String imageURL = "https://graph.facebook.com/" + userID + "/picture?type=large";
         System.err.println("MY ID IS: " + MainActivity.myID);
         System.err.println("MY Name is: " + MainActivity.userName);
         Picasso.with(this).load(imageURL).into(profileImage);
 
         //String URL= String.format("54.149.222.140/users/%s", searched_id);
-        String URL = String.format("http://54.149.222.140/users/%s", "100006683413828");
+        String URL = String.format("http://54.149.222.140/users/%s", userID);
         JsonObjectRequest jsonRequest = new JsonObjectRequest
                 (Request.Method.GET, URL, null, new Response.Listener<JSONObject>() {
                     @Override
@@ -224,8 +226,7 @@ public class ViewPeopleActivity extends AppCompatActivity {
         searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
         searchView.setSuggestionsAdapter(mAdapter);
 
-        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withName("View People");
-        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withName("View People");
+        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withName("My Profile");
 
         Drawer result = new DrawerBuilder()
                 .withActivity(this)
@@ -235,27 +236,19 @@ public class ViewPeopleActivity extends AppCompatActivity {
                 .withActionBarDrawerToggleAnimated(true)
                 .addDrawerItems(
                         //pass your items here
-                        item1,
-                        item2
+                        item1
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         // do something with the clicked item :D
-                        if(position == 0) {
-                            onLogin();
-                            mTracker.send(new HitBuilders.EventBuilder()
-                                    .setCategory("SideMenu")
-                                    .setAction("View People Clicked from SideMenu")
-                                    .build());
-                        }
-                        else if(position == 1) {
+
                             updateProfile(MainActivity.userName);
                             mTracker.send(new HitBuilders.EventBuilder()
                                     .setCategory("SideMenu")
                                     .setAction("View My Profile Clicked from SideMenu")
                                     .build());
-                        }
+
 
                         return true;
                     }

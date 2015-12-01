@@ -128,6 +128,7 @@ public class MainActivity extends AppCompatActivity {
                                     @Override
                                     public void onErrorResponse(VolleyError volleyError) {
                                         volleyError.printStackTrace();
+                                        System.out.println("hererererer");
                                     }
                                 }) {
                             @Override
@@ -207,34 +208,6 @@ public class MainActivity extends AppCompatActivity {
         inflater.inflate(R.menu.menu_main, menu);
         MenuItem searchItem = menu.findItem(R.id.action_search);
         SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
-
-        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withName("View People");
-
-        Drawer result = new DrawerBuilder()
-                .withActivity(this)
-                .withToolbar(toolbar)
-                .withRootView(R.id.drawer_layout)
-                .withActionBarDrawerToggle(true)
-                .withActionBarDrawerToggleAnimated(true)
-                .addDrawerItems(
-                        //pass your items here
-                        item1
-                )
-                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
-                    @Override
-                    public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
-                        // do something with the clicked item :D
-                        onLogin();
-                        mTracker.send(new HitBuilders.EventBuilder()
-                                .setCategory("SideMenu")
-                                .setAction("View People Clicked from SideMenu")
-                                .build());
-                        return true;
-                    }
-                })
-                .build();
-
-
         return true;
     }
 
@@ -254,6 +227,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ViewPeopleActivity.class);
         startActivity(intent);
     }
+
 
     private void updateWithToken(AccessToken currentAccessToken) {
         myID = currentAccessToken.getUserId();
