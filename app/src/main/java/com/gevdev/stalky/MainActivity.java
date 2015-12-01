@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "Login";
     private Tracker mTracker;
     private Toolbar toolbar;
+    public static String userName;
+    public static String myID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,12 +94,18 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(final LoginResult loginResult) {
                         // App code
-                        info.setText(
-                                "User ID: " + loginResult.getAccessToken().getUserId()
-                                        + "\n" + "Auth Token: " + loginResult.getAccessToken().getToken()
-                        );
+//                        info.setText(
+//                                "User ID: " + loginResult.getAccessToken().getUserId()
+//                                        + "\n" + "Auth Token: " + loginResult.getAccessToken().getToken()
+//                        );
 
                         //onLogin();
+
+                        myID = loginResult.getAccessToken().getUserId();
+
+                        userName = "https://graph.facebook.com/"+myID+"?fields=first_name"
+                                + "https://graph.facebook.com/"+myID+"?fields=last_name";
+
                         accessToken = loginResult.getAccessToken();
 
                         mTracker.send(new HitBuilders.EventBuilder()
@@ -248,6 +256,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateWithToken(AccessToken currentAccessToken) {
+        myID = currentAccessToken.getUserId();
+
+        userName = "https://graph.facebook.com/"+myID+"?fields=first_name"
+                + "https://graph.facebook.com/"+myID+"?fields=last_name";
+
         if(currentAccessToken != null) onLogin();
     }
+
+
 }

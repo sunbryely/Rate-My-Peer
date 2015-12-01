@@ -85,6 +85,8 @@ public class ViewPeopleActivity extends AppCompatActivity {
 
 
         nameList = new ArrayList<>();
+        String[] myStrArr = {MainActivity.userName, MainActivity.myID};
+        nameList.add(myStrArr);
 
 
         String[] from = new String[]{"names"};
@@ -100,6 +102,8 @@ public class ViewPeopleActivity extends AppCompatActivity {
         setContentView(R.layout.user_profile_layout);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("My Profile");
+
 
         AnalyticsApplication application = (AnalyticsApplication) getApplication();
         mTracker = application.getDefaultTracker();
@@ -139,8 +143,10 @@ public class ViewPeopleActivity extends AppCompatActivity {
         name.setText(profileName);
         String searchedId = intent.getStringExtra("searchedId");
 
-        String userID = "100006683413828";
-        String imageURL = "https://graph.facebook.com/" + userID + "/picture?type=large";
+        String userID = "me";
+        String imageURL = "https://graph.facebook.com/" + MainActivity.myID + "/picture?type=large";
+        System.err.println("MY ID IS: " + MainActivity.myID);
+        System.err.println("MY Name is: " + MainActivity.userName);
         Picasso.with(this).load(imageURL).into(profileImage);
 
         //String URL= String.format("54.149.222.140/users/%s", searched_id);
@@ -216,6 +222,7 @@ public class ViewPeopleActivity extends AppCompatActivity {
         searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
         searchView.setSuggestionsAdapter(mAdapter);
 
+        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withName("View People");
         PrimaryDrawerItem item1 = new PrimaryDrawerItem().withName("View People");
 
         Drawer result = new DrawerBuilder()
@@ -226,17 +233,28 @@ public class ViewPeopleActivity extends AppCompatActivity {
                 .withActionBarDrawerToggleAnimated(true)
                 .addDrawerItems(
                         //pass your items here
-                        item1
+                        item1,
+                        item2
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         // do something with the clicked item :D
-                        onLogin();
-                        mTracker.send(new HitBuilders.EventBuilder()
-                                .setCategory("SideMenu")
-                                .setAction("View People Clicked from SideMenu")
-                                .build());
+                        if(position == 0) {
+                            onLogin();
+                            mTracker.send(new HitBuilders.EventBuilder()
+                                    .setCategory("SideMenu")
+                                    .setAction("View People Clicked from SideMenu")
+                                    .build());
+                        }
+                        else if(position == 1) {
+                            updateProfile(MainActivity.userName);
+                            mTracker.send(new HitBuilders.EventBuilder()
+                                    .setCategory("SideMenu")
+                                    .setAction("View My Profile Clicked from SideMenu")
+                                    .build());
+                        }
+
                         return true;
                     }
                 })
@@ -367,12 +385,15 @@ public class ViewPeopleActivity extends AppCompatActivity {
 
     public void updateProfile(String name) {
 
+        System.err.println("Name is: " + name);
+        Log.i("NAME", name);
+
+        getSupportActionBar().setTitle(name + "'s Profile");
+
         String userID = "";
 
         for(int i = 0; i<nameList.size(); i++) {
-            System.err.println(name);
             if(name.equals(nameList.get(i)[0])) {
-                System.err.println(nameList.get(i)[0] + " : " + nameList.get(i)[1]);
                 userID = nameList.get(i)[1];
                 break;
             }
