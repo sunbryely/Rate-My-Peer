@@ -53,6 +53,9 @@ public class RateActivity extends AppCompatActivity {
     JSONObject ratings = new JSONObject();
     JSONObject comment = new JSONObject();
 
+    private boolean commentSuccess = false;
+    private boolean ratingSuccess = false;
+
 
     private Tracker mTracker;
     private Toolbar toolbar;
@@ -68,6 +71,9 @@ public class RateActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        initView();
+        updateView();
+
         addListenerOnRatingBar();
         try {
             addSubmitListener();
@@ -76,7 +82,8 @@ public class RateActivity extends AppCompatActivity {
         }
     }
 
-    public void addListenerOnRatingBar(){
+
+    private void initView() {
         friendRatingBar = (RatingBar) findViewById(R.id.friendliness_rating);
         skillsRatingBar = (RatingBar) findViewById(R.id.skills_rating);
         teamRatingBar = (RatingBar) findViewById(R.id.teamwork_rating);
@@ -87,6 +94,78 @@ public class RateActivity extends AppCompatActivity {
         teamValue = (TextView) findViewById(R.id.teamwork_score);
         funValue = (TextView) findViewById(R.id.funfactor_score);
 
+    }
+
+    private void updateView() {
+
+        String user_id_from = "10153269447328549";
+        String user_id_to = "100006683413828";
+
+        // update comment
+        String commentURL = String.format("http://54.149.222.140/comment?user_id_from=%s&user_id_to=%s", user_id_from, user_id_to);
+        JsonObjectRequest jsonRequest = new JsonObjectRequest
+                (Request.Method.GET, commentURL, null, new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject jsonObject) {
+                        Log.i("RESPONSE", "SUCCESS");
+                        Log.e("comment", "jsonObject = " + jsonObject.toString());
+                        try {
+                            String comment = jsonObject.getString("comment");
+                            comments.setText(comment);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+                        Log.i("RESPONSE", "FAILURE");
+                        volleyError.printStackTrace();
+                    }
+                });
+        MemberServiceCenter.requestQueue.add(jsonRequest);
+
+        // update rating
+        String ratingURL = String.format("http://54.149.222.140/rate?user_id_from=%s&user_id_to=%s", user_id_from, user_id_to);
+        JsonObjectRequest jsonRequest2 = new JsonObjectRequest
+                (Request.Method.GET, ratingURL, null, new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject jsonObject) {
+                        Log.i("RESPONSE", "SUCCESS");
+                        Log.e("rating", "jsonObject = " + jsonObject.toString());
+
+                        try {
+                            String friendScore = jsonObject.getString("rating_friendliness");
+                            friendValue.setText(friendScore);
+                            friendRatingBar.setRating(Float.parseFloat(friendScore));
+
+                            String skillScore = jsonObject.getString("rating_skill");
+                            skillsValue.setText(skillScore);
+                            skillsRatingBar.setRating(Float.parseFloat(skillScore));
+
+                            String teamScore = jsonObject.getString("rating_teamwork");
+                            teamValue.setText(teamScore);
+                            teamRatingBar.setRating(Float.parseFloat(teamScore));
+
+                            String funScore = jsonObject.getString("rating_funfactor");
+                            funValue.setText(funScore);
+                            funRatingBar.setRating(Float.parseFloat(funScore));
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+                        Log.i("RESPONSE", "FAILURE");
+                        volleyError.printStackTrace();
+                    }
+                });
+        MemberServiceCenter.requestQueue.add(jsonRequest2);
+    }
+
+    public void addListenerOnRatingBar(){
 
         //set listener for friend ratings bar
         friendRatingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
@@ -143,29 +222,22 @@ public class RateActivity extends AppCompatActivity {
         submitBtn = (Button) findViewById(R.id.submit_btn);
 
 
-        ratings.put("friendliness", friendStars);
-        ratings.put("skill", skillsStars);
-        ratings.put("teamwork", teamStars);
-        ratings.put("funcactor", funStars);
+        ratings.put("user_id_from", "10153269447328549");
+        ratings.put("user_id_to", "100006683413828");
 
         comment.put("user_id_from", "10153269447328549");
         comment.put("user_id_to", "100006683413828");
-        comment.put("comment", comments.getText().toString());
-
-        final JSONObject jsonObject = new JSONObject();
-        final JSONObject rating = new JSONObject();
-        jsonObject.put("friendliness", friendStars);
-        jsonObject.put("skill", skillsStars);
-        jsonObject.put("teamwork", teamStars);
-        jsonObject.put("funcactor", funStars);
-        rating.put("facebook_id", "10153269447328549");
-        rating.put("ratings", jsonObject);
-
 
         //submit the rating
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                try {
+                    comment.put("comment", comments.getText().toString());
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
 
                 // add comment
                 String commentURL = String.format("http://54.149.222.140/comments");
@@ -174,6 +246,8 @@ public class RateActivity extends AppCompatActivity {
                             @Override
                             public void onResponse(JSONObject jsonObject) {
                                 Log.i("RESPONSE", "SUCCESS");
+                                commentSuccess = true;
+                                if (ratingSuccess) finish();
                             }
                         }, new Response.ErrorListener() {
                             @Override
@@ -184,13 +258,25 @@ public class RateActivity extends AppCompatActivity {
                         });
                 MemberServiceCenter.requestQueue.add(jsonRequest);
 
+
+                try {
+                    ratings.put("friendliness", friendStars);
+                    ratings.put("skill", skillsStars);
+                    ratings.put("teamwork", teamStars);
+                    ratings.put("funfactor", funStars);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
                 // add rating
-                String ratingURL = String.format("http://54.149.222.140/rate/%s", "100006683413828");
+                String ratingURL = String.format("http://54.149.222.140/rate");
                 JsonObjectRequest jsonRequest2 = new JsonObjectRequest
                         (Request.Method.POST, ratingURL, ratings, new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject jsonObject) {
                                 Log.i("RESPONSE", "SUCCESS");
+                                ratingSuccess = true;
+                                if (commentSuccess) finish();
                             }
                         }, new Response.ErrorListener() {
                             @Override
@@ -200,6 +286,7 @@ public class RateActivity extends AppCompatActivity {
                             }
                         });
                 MemberServiceCenter.requestQueue.add(jsonRequest2);
+
             }
         });
     }
