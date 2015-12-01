@@ -19,10 +19,24 @@
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Leave a Rating!"
+                android:textSize="30dp"
+                android:gravity="top"
+                android:textColor="@color/md_blue_400" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:weightSum="1"
-            android:padding="15dp">
+            android:padding="15dp"
+            android:layout_marginTop="30dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -161,20 +175,30 @@
                     android:layout_gravity="center_horizontal" />
             </LinearLayout>
 
-
             <LinearLayout
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Leave a comment"
+                    android:textSize="15dp"
+                    />
 
                 <EditText
                     android:id="@+id/editText"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
+                    android:layout_height="wrap_content"
+                    android:background="@color/md_blue_grey_100">
                     <requestFocus />
                 </EditText>
+
             </LinearLayout>
+
 
             <Button
                 android:layout_width="wrap_content"
