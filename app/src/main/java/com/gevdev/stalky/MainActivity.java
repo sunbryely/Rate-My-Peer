@@ -117,8 +117,15 @@ public class MainActivity extends AppCompatActivity {
                         String URL = String.format("http://54.149.222.140/login");
                         //JSONObject objectToPost = new JSONObject();
                         //objectToPost.put(key, value);
+                        JSONObject params = new JSONObject();
+                        try {
+                            params.put("userId", loginResult.getAccessToken().getUserId());
+                            params.put("userToken", loginResult.getAccessToken().getToken());
+                        } catch( org.json.JSONException e ) {
+                            e.printStackTrace();
+                        }
                         JsonObjectRequest jsonRequest = new JsonObjectRequest
-                                (Request.Method.POST, URL, null, new Response.Listener<JSONObject>() {
+                                (Request.Method.POST, URL, params, new Response.Listener<JSONObject>() {
                                     @Override
                                     public void onResponse(JSONObject jsonObject) {
                                         Log.i("json", jsonObject.toString());
@@ -130,15 +137,7 @@ public class MainActivity extends AppCompatActivity {
                                         volleyError.printStackTrace();
                                         System.out.println("hererererer");
                                     }
-                                }) {
-                            @Override
-                            protected Map<String, String> getParams() {
-                                Map<String, String> params = new HashMap<String, String>();
-                                params.put("userId", loginResult.getAccessToken().getUserId());
-                                params.put("userToken", loginResult.getAccessToken().getToken());
-                                return params;
-                            }
-                        };
+                                });
 
                         MemberServiceCenter.requestQueue.add(jsonRequest);
                     }
