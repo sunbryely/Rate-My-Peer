@@ -69,6 +69,8 @@ public class ViewPeopleActivity extends AppCompatActivity {
     private Tracker mTracker;
     Toolbar toolbar;
 
+    public static String viewID = ""; //ID of the person who's profile we are looking at
+
     RecyclerView recyclerView;
     RecyclerViewAdapter recyclerViewAdapter;
 
@@ -85,6 +87,8 @@ public class ViewPeopleActivity extends AppCompatActivity {
 
 
         nameList = new ArrayList<>();
+        String[] myStrArr = {MainActivity.userName, MainActivity.myID};
+        nameList.add(myStrArr);
 
 
         String[] from = new String[]{"names"};
@@ -100,6 +104,8 @@ public class ViewPeopleActivity extends AppCompatActivity {
         setContentView(R.layout.user_profile_layout);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("My Profile");
+
 
         AnalyticsApplication application = (AnalyticsApplication) getApplication();
         mTracker = application.getDefaultTracker();
@@ -128,7 +134,7 @@ public class ViewPeopleActivity extends AppCompatActivity {
         rateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ViewPeopleActivity.this, RateActivity.class));
+                startActivityForResult(new Intent(ViewPeopleActivity.this, RateActivity.class), 1);
             }
         });
 
@@ -139,12 +145,16 @@ public class ViewPeopleActivity extends AppCompatActivity {
         name.setText(profileName);
         String searchedId = intent.getStringExtra("searchedId");
 
-        String userID = "100006683413828";
+        String userID = "";
+        if(viewID.equals("")) userID = MainActivity.myID;
+        else                  userID = viewID;
         String imageURL = "https://graph.facebook.com/" + userID + "/picture?type=large";
+        System.err.println("MY ID IS: " + MainActivity.myID);
+        System.err.println("MY Name is: " + MainActivity.userName);
         Picasso.with(this).load(imageURL).into(profileImage);
 
         //String URL= String.format("54.149.222.140/users/%s", searched_id);
-        String URL = String.format("http://54.149.222.140/users/%s", "100006683413828");
+        String URL = String.format("http://54.149.222.140/users/%s", userID);
         JsonObjectRequest jsonRequest = new JsonObjectRequest
                 (Request.Method.GET, URL, null, new Response.Listener<JSONObject>() {
                     @Override
@@ -169,6 +179,13 @@ public class ViewPeopleActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (requestCode) {
+            case 1:
+                finish();
+        }
+    }
     protected void updateUI(JSONObject obj) {
         try {
             JSONObject ratingObj = obj.getJSONObject("ratings");
@@ -193,6 +210,7 @@ public class ViewPeopleActivity extends AppCompatActivity {
             for (int i = 0; i < commentsArray.length(); i++) {
                 Comment cur = new Comment();
                 cur.comment = commentsArray.getJSONObject(i).getString("comment");
+                if (cur.comment.equals("")) continue;
                 cur.user_id_from = commentsArray.getJSONObject(i).getString("user_id_from");
                 cur.updated_at = commentsArray.getJSONObject(i).getString("updated_at");
                 commentsList.add(cur);
@@ -216,7 +234,7 @@ public class ViewPeopleActivity extends AppCompatActivity {
         searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
         searchView.setSuggestionsAdapter(mAdapter);
 
-        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withName("View People");
+        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withName("My Profile");
 
         Drawer result = new DrawerBuilder()
                 .withActivity(this)
@@ -232,11 +250,14 @@ public class ViewPeopleActivity extends AppCompatActivity {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         // do something with the clicked item :D
-                        onLogin();
-                        mTracker.send(new HitBuilders.EventBuilder()
-                                .setCategory("SideMenu")
-                                .setAction("View People Clicked from SideMenu")
-                                .build());
+
+                            updateProfile(MainActivity.userName);
+                            mTracker.send(new HitBuilders.EventBuilder()
+                                    .setCategory("SideMenu")
+                                    .setAction("View My Profile Clicked from SideMenu")
+                                    .build());
+
+
                         return true;
                     }
                 })
@@ -367,13 +388,17 @@ public class ViewPeopleActivity extends AppCompatActivity {
 
     public void updateProfile(String name) {
 
+        System.err.println("Name is: " + name);
+        Log.i("NAME", name);
+
+        getSupportActionBar().setTitle(name + "'s Profile");
+
         String userID = "";
 
         for(int i = 0; i<nameList.size(); i++) {
-            System.err.println(name);
             if(name.equals(nameList.get(i)[0])) {
-                System.err.println(nameList.get(i)[0] + " : " + nameList.get(i)[1]);
                 userID = nameList.get(i)[1];
+                viewID = userID;
                 break;
             }
         }

@@ -51,6 +51,10 @@ public class RateActivity extends AppCompatActivity {
     private float funStars;
 
     JSONObject ratings = new JSONObject();
+    JSONObject comment = new JSONObject();
+
+    private boolean commentSuccess = false;
+    private boolean ratingSuccess = false;
 
 
     private Tracker mTracker;
@@ -67,6 +71,9 @@ public class RateActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        initView();
+        updateView();
+
         addListenerOnRatingBar();
         try {
             addSubmitListener();
@@ -75,7 +82,8 @@ public class RateActivity extends AppCompatActivity {
         }
     }
 
-    public void addListenerOnRatingBar(){
+
+    private void initView() {
         friendRatingBar = (RatingBar) findViewById(R.id.friendliness_rating);
         skillsRatingBar = (RatingBar) findViewById(R.id.skills_rating);
         teamRatingBar = (RatingBar) findViewById(R.id.teamwork_rating);
@@ -86,40 +94,187 @@ public class RateActivity extends AppCompatActivity {
         teamValue = (TextView) findViewById(R.id.teamwork_score);
         funValue = (TextView) findViewById(R.id.funfactor_score);
 
+    }
 
+    private void updateView() {
 
+        String user_id_from = MainActivity.myID;
+        String user_id_to = ViewPeopleActivity.viewID;
 
+        if (MainActivity.myID != null) Log.e("idd", MainActivity.myID);
+        else Log.e("idd", "its null");
+        if (ViewPeopleActivity.viewID != null) Log.e("idd", ViewPeopleActivity.viewID);
+        else Log.e("idd", "its null");
 
+        // update comment
+        String commentURL = String.format("http://54.149.222.140/comment?user_id_from=%s&user_id_to=%s", user_id_from, user_id_to);
+        JsonObjectRequest jsonRequest = new JsonObjectRequest
+                (Request.Method.GET, commentURL, null, new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject jsonObject) {
+                        Log.i("115: RESPONSE", "SUCCESS");
+                        Log.e("comment", "jsonObject = " + jsonObject.toString());
+                        try {
+                            String comment = jsonObject.getString("comment");
+                            comments.setText(comment);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+                        Log.i("127: RESPONSE", "FAILURE");
+                        volleyError.printStackTrace();
+                    }
+                });
+        MemberServiceCenter.requestQueue.add(jsonRequest);
+
+        // update rating
+        String ratingURL = String.format("http://54.149.222.140/rate?user_id_from=%s&user_id_to=%s", user_id_from, user_id_to);
+        JsonObjectRequest jsonRequest2 = new JsonObjectRequest
+                (Request.Method.GET, ratingURL, null, new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject jsonObject) {
+                        Log.i("139: RESPONSE", "SUCCESS");
+                        Log.e("rating", "jsonObject = " + jsonObject.toString());
+
+                        try {
+                            String friendScore = jsonObject.getString("rating_friendliness");
+                            friendValue.setText(friendScore);
+                            friendRatingBar.setRating(Float.parseFloat(friendScore));
+
+                            String skillScore = jsonObject.getString("rating_skill");
+                            skillsValue.setText(skillScore);
+                            skillsRatingBar.setRating(Float.parseFloat(skillScore));
+
+                            String teamScore = jsonObject.getString("rating_teamwork");
+                            teamValue.setText(teamScore);
+                            teamRatingBar.setRating(Float.parseFloat(teamScore));
+
+                            String funScore = jsonObject.getString("rating_funfactor");
+                            funValue.setText(funScore);
+                            funRatingBar.setRating(Float.parseFloat(funScore));
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+                        Log.i("166: RESPONSE", "FAILURE");
+                        volleyError.printStackTrace();
+                    }
+                });
+        MemberServiceCenter.requestQueue.add(jsonRequest2);
+    }
+
+    public void addListenerOnRatingBar(){
 
         //set listener for friend ratings bar
         friendRatingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             public void onRatingChanged(RatingBar friendRatingBar, float rating, boolean fromUser) {
-                friendValue.setText(String.valueOf(rating));
                 friendStars = friendRatingBar.getRating();
+                if(friendStars >= 0 && friendStars <= 1){
+                    friendValue.setText("8==D");
+                }
+                else if(friendStars > 1 && friendStars <= 2){
+                    friendValue.setText("Mehh");
+                }
+
+                else if(friendStars > 2 && friendStars <= 3){
+                    friendValue.setText("Oh. K.");
+                }
+
+                else if(friendStars > 3 && friendStars <= 4){
+                    friendValue.setText("Yee");
+                }
+
+                else{
+                    friendValue.setText("<33");
+                }
             }
         });
 
         //set listener for skills ratings bar
         skillsRatingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             public void onRatingChanged(RatingBar skillsRatingBar, float rating, boolean fromUser) {
-                skillsValue.setText(String.valueOf(rating));
                 skillsStars = skillsRatingBar.getRating();
+                if(skillsStars >= 0 && skillsStars <= 1){
+                    skillsValue.setText("8==D");
+                }
+
+                else if(skillsStars > 1 && skillsStars <= 2){
+                    skillsValue.setText("Mehh");
+                }
+
+                else if(skillsStars > 2 && skillsStars <= 3){
+                    skillsValue.setText("Oh. K.");
+                }
+
+                else if(skillsStars > 3 && skillsStars <= 4){
+                    skillsValue.setText("Yee");
+                }
+
+                else{
+                    skillsValue.setText("<33");
+                }
             }
         });
 
         //set listener for team ratings bar
         teamRatingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             public void onRatingChanged(RatingBar teamRatingBar, float rating, boolean fromUser) {
-                teamValue.setText(String.valueOf(rating));
                 teamStars = teamRatingBar.getRating();
+                if(teamStars >= 0 && teamStars <= 1){
+                    teamValue.setText("8==D");
+                }
+
+                else if(teamStars > 1 && teamStars <= 2){
+                    teamValue.setText("Mehh");
+                }
+
+                else if(teamStars > 2 && teamStars <= 3){
+                    teamValue.setText("Oh. K.");
+                }
+
+                else if(teamStars > 3 && teamStars <= 4){
+                    teamValue.setText("Yee");
+                }
+
+                else{
+                    teamValue.setText("<33");
+                }
+
+
             }
         });
 
         //set listener for friend ratings bar
         funRatingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             public void onRatingChanged(RatingBar funRatingBar, float rating, boolean fromUser) {
-                funValue.setText(String.valueOf(rating));
                 funStars = funRatingBar.getRating();
+                if(funStars >= 0 && funStars <= 1){
+                    funValue.setText("8==D");
+                }
+
+                else if(funStars > 1 && funStars <= 2){
+                    funValue.setText("Mehh");
+                }
+
+                else if(funStars > 2 && funStars <= 3){
+                    funValue.setText("Oh. K.");
+                }
+
+                else if(funStars > 3 && funStars <= 4){
+                    funValue.setText("Yee");
+                }
+
+                else{
+                    funValue.setText("<33");
+                }
+
             }
         });
     }
@@ -146,54 +301,79 @@ public class RateActivity extends AppCompatActivity {
         submitBtn = (Button) findViewById(R.id.submit_btn);
 
 
-        ratings.put("friendliness", friendStars);
-        ratings.put("skill", skillsStars);
-        ratings.put("teamwork", teamStars);
-        ratings.put("funcactor", funStars);
+        ratings.put("user_id_from", MainActivity.myID);
+        ratings.put("user_id_to", ViewPeopleActivity.viewID);
 
-
-        JSONArray array = new JSONArray();
-        JSONObject comment = new JSONObject();
-        JSONObject arrayObj = new JSONObject();
-        arrayObj.put("user_id_from", "10207858735896290");
-        arrayObj.put("user_id_to", "100006683413828");
-        arrayObj.put("comment", comments);
-        Calendar cal = Calendar.getInstance();
-        int seconds = cal.get(Calendar.SECOND);
-        arrayObj.put("updated_at", String.valueOf(cal));
-        array.put(arrayObj);
-        comment.put("comments", array);
-
-        final JSONObject jsonObject = new JSONObject();
-        final JSONObject rating = new JSONObject();
-        jsonObject.put("friendliness", friendStars);
-        jsonObject.put("skill", skillsStars);
-        jsonObject.put("teamwork", teamStars);
-        jsonObject.put("funcactor", funStars);
-        rating.put("facebook_id", "10208046193809664");
-        rating.put("ratings", jsonObject);
-
+        comment.put("user_id_from", MainActivity.myID);
+        comment.put("user_id_to", ViewPeopleActivity.viewID);
 
         //submit the rating
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String URL = String.format("http://54.149.222.140/users/%s", "10208046193809664");
 
+                try {
+                    comment.put("comment", comments.getText().toString());
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+                // add comment
+                String commentURL = String.format("http://54.149.222.140/comments");
                 JsonObjectRequest jsonRequest = new JsonObjectRequest
-                        (Request.Method.GET, URL, ratings, new Response.Listener<JSONObject>() {
+                        (Request.Method.POST, commentURL, comment, new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject jsonObject) {
-                                Log.i("RESPONSE", "SUCCESS");
+                                Log.i("253: RESPONSE", "SUCCESS");
+                                commentSuccess = true;
+                                if (ratingSuccess) {
+                                    finish();
+                                    Intent i = new Intent(RateActivity.this, ViewPeopleActivity.class);
+                                    startActivity(i);
+                                }
                             }
                         }, new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError volleyError) {
-                                Log.i("RESPONSE", "FAILURE");
+                                Log.i("260: RESPONSE", "FAILURE");
                                 volleyError.printStackTrace();
                             }
                         });
                 MemberServiceCenter.requestQueue.add(jsonRequest);
+
+
+                try {
+                    ratings.put("friendliness", friendStars);
+                    ratings.put("skill", skillsStars);
+                    ratings.put("teamwork", teamStars);
+                    ratings.put("funfactor", funStars);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+                // add rating
+                String ratingURL = String.format("http://54.149.222.140/rate");
+                JsonObjectRequest jsonRequest2 = new JsonObjectRequest
+                        (Request.Method.POST, ratingURL, ratings, new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject jsonObject) {
+                                Log.i("282: RESPONSE", "SUCCESS");
+                                ratingSuccess = true;
+                                if (commentSuccess) {
+                                    finish();
+                                    Intent i = new Intent(RateActivity.this, ViewPeopleActivity.class);
+                                    RateActivity.this.startActivity(i);
+                                }
+                            }
+                        }, new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError volleyError) {
+                                Log.i("289: RESPONSE", "FAILURE");
+                                volleyError.printStackTrace();
+                            }
+                        });
+                MemberServiceCenter.requestQueue.add(jsonRequest2);
+
             }
         });
     }
@@ -217,6 +397,7 @@ public class RateActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
 
         PrimaryDrawerItem item1 = new PrimaryDrawerItem().withName("View People");
+        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withName("My Profile ");
 
         Drawer result = new DrawerBuilder()
                 .withActivity(this)
@@ -226,7 +407,7 @@ public class RateActivity extends AppCompatActivity {
                 .withActionBarDrawerToggleAnimated(true)
                 .addDrawerItems(
                         //pass your items here
-                        item1
+                        item1, item2
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override

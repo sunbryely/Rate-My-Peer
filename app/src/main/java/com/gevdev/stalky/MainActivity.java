@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "Login";
     private Tracker mTracker;
     private Toolbar toolbar;
+    public static String userName;
+    public static String myID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,12 +94,18 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(final LoginResult loginResult) {
                         // App code
-                        info.setText(
-                                "User ID: " + loginResult.getAccessToken().getUserId()
-                                        + "\n" + "Auth Token: " + loginResult.getAccessToken().getToken()
-                        );
+//                        info.setText(
+//                                "User ID: " + loginResult.getAccessToken().getUserId()
+//                                        + "\n" + "Auth Token: " + loginResult.getAccessToken().getToken()
+//                        );
 
                         //onLogin();
+
+                        myID = loginResult.getAccessToken().getUserId();
+
+                        userName = "https://graph.facebook.com/"+myID+"?fields=first_name"
+                                + "https://graph.facebook.com/"+myID+"?fields=last_name";
+
                         accessToken = loginResult.getAccessToken();
 
                         mTracker.send(new HitBuilders.EventBuilder()
@@ -109,8 +117,15 @@ public class MainActivity extends AppCompatActivity {
                         String URL = String.format("http://54.149.222.140/login");
                         //JSONObject objectToPost = new JSONObject();
                         //objectToPost.put(key, value);
+                        JSONObject params = new JSONObject();
+                        try {
+                            params.put("userId", loginResult.getAccessToken().getUserId());
+                            params.put("userToken", loginResult.getAccessToken().getToken());
+                        } catch( org.json.JSONException e ) {
+                            e.printStackTrace();
+                        }
                         JsonObjectRequest jsonRequest = new JsonObjectRequest
-                                (Request.Method.POST, URL, null, new Response.Listener<JSONObject>() {
+                                (Request.Method.POST, URL, params, new Response.Listener<JSONObject>() {
                                     @Override
                                     public void onResponse(JSONObject jsonObject) {
                                         Log.i("json", jsonObject.toString());
@@ -120,16 +135,9 @@ public class MainActivity extends AppCompatActivity {
                                     @Override
                                     public void onErrorResponse(VolleyError volleyError) {
                                         volleyError.printStackTrace();
+                                        System.out.println("hererererer");
                                     }
-                                }) {
-                            @Override
-                            protected Map<String, String> getParams() {
-                                Map<String, String> params = new HashMap<String, String>();
-                                params.put("userId", loginResult.getAccessToken().getUserId());
-                                params.put("userToken", loginResult.getAccessToken().getToken());
-                                return params;
-                            }
-                        };
+                                });
 
                         MemberServiceCenter.requestQueue.add(jsonRequest);
                     }
@@ -199,34 +207,6 @@ public class MainActivity extends AppCompatActivity {
         inflater.inflate(R.menu.menu_main, menu);
         MenuItem searchItem = menu.findItem(R.id.action_search);
         SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
-
-        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withName("View People");
-
-        Drawer result = new DrawerBuilder()
-                .withActivity(this)
-                .withToolbar(toolbar)
-                .withRootView(R.id.drawer_layout)
-                .withActionBarDrawerToggle(true)
-                .withActionBarDrawerToggleAnimated(true)
-                .addDrawerItems(
-                        //pass your items here
-                        item1
-                )
-                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
-                    @Override
-                    public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
-                        // do something with the clicked item :D
-                        onLogin();
-                        mTracker.send(new HitBuilders.EventBuilder()
-                                .setCategory("SideMenu")
-                                .setAction("View People Clicked from SideMenu")
-                                .build());
-                        return true;
-                    }
-                })
-                .build();
-
-
         return true;
     }
 
@@ -247,7 +227,15 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
     private void updateWithToken(AccessToken currentAccessToken) {
+        myID = currentAccessToken.getUserId();
+
+        userName = "https://graph.facebook.com/"+myID+"?fields=first_name"
+                + "https://graph.facebook.com/"+myID+"?fields=last_name";
+
         if(currentAccessToken != null) onLogin();
     }
+
+
 }
