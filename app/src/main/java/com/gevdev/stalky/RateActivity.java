@@ -98,8 +98,13 @@ public class RateActivity extends AppCompatActivity {
 
     private void updateView() {
 
-        String user_id_from = "10153269447328549";
-        String user_id_to = "100006683413828";
+        String user_id_from = MainActivity.myID;
+        String user_id_to = ViewPeopleActivity.viewID;
+
+        if (MainActivity.myID != null) Log.e("idd", MainActivity.myID);
+        else Log.e("idd", "its null");
+        if (ViewPeopleActivity.viewID != null) Log.e("idd", ViewPeopleActivity.viewID);
+        else Log.e("idd", "its null");
 
         // update comment
         String commentURL = String.format("http://54.149.222.140/comment?user_id_from=%s&user_id_to=%s", user_id_from, user_id_to);
@@ -107,7 +112,7 @@ public class RateActivity extends AppCompatActivity {
                 (Request.Method.GET, commentURL, null, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject jsonObject) {
-                        Log.i("RESPONSE", "SUCCESS");
+                        Log.i("115: RESPONSE", "SUCCESS");
                         Log.e("comment", "jsonObject = " + jsonObject.toString());
                         try {
                             String comment = jsonObject.getString("comment");
@@ -119,7 +124,7 @@ public class RateActivity extends AppCompatActivity {
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
-                        Log.i("RESPONSE", "FAILURE");
+                        Log.i("127: RESPONSE", "FAILURE");
                         volleyError.printStackTrace();
                     }
                 });
@@ -131,7 +136,7 @@ public class RateActivity extends AppCompatActivity {
                 (Request.Method.GET, ratingURL, null, new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject jsonObject) {
-                        Log.i("RESPONSE", "SUCCESS");
+                        Log.i("139: RESPONSE", "SUCCESS");
                         Log.e("rating", "jsonObject = " + jsonObject.toString());
 
                         try {
@@ -158,7 +163,7 @@ public class RateActivity extends AppCompatActivity {
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
-                        Log.i("RESPONSE", "FAILURE");
+                        Log.i("166: RESPONSE", "FAILURE");
                         volleyError.printStackTrace();
                     }
                 });
@@ -222,11 +227,11 @@ public class RateActivity extends AppCompatActivity {
         submitBtn = (Button) findViewById(R.id.submit_btn);
 
 
-        ratings.put("user_id_from", "10153269447328549");
-        ratings.put("user_id_to", "100006683413828");
+        ratings.put("user_id_from", MainActivity.myID);
+        ratings.put("user_id_to", ViewPeopleActivity.viewID);
 
-        comment.put("user_id_from", "10153269447328549");
-        comment.put("user_id_to", "100006683413828");
+        comment.put("user_id_from", MainActivity.myID);
+        comment.put("user_id_to", ViewPeopleActivity.viewID);
 
         //submit the rating
         submitBtn.setOnClickListener(new View.OnClickListener() {
@@ -245,14 +250,14 @@ public class RateActivity extends AppCompatActivity {
                         (Request.Method.POST, commentURL, comment, new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject jsonObject) {
-                                Log.i("RESPONSE", "SUCCESS");
+                                Log.i("253: RESPONSE", "SUCCESS");
                                 commentSuccess = true;
                                 if (ratingSuccess) finish();
                             }
                         }, new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError volleyError) {
-                                Log.i("RESPONSE", "FAILURE");
+                                Log.i("260: RESPONSE", "FAILURE");
                                 volleyError.printStackTrace();
                             }
                         });
@@ -274,14 +279,14 @@ public class RateActivity extends AppCompatActivity {
                         (Request.Method.POST, ratingURL, ratings, new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject jsonObject) {
-                                Log.i("RESPONSE", "SUCCESS");
+                                Log.i("282: RESPONSE", "SUCCESS");
                                 ratingSuccess = true;
                                 if (commentSuccess) finish();
                             }
                         }, new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError volleyError) {
-                                Log.i("RESPONSE", "FAILURE");
+                                Log.i("289: RESPONSE", "FAILURE");
                                 volleyError.printStackTrace();
                             }
                         });
