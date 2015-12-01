@@ -3,8 +3,7 @@ package com.gevdev.stalky;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-
-import java.util.logging.Handler;
+import android.os.Handler;
 
 /**
  * Created by Sunbear on 12/1/2015.
