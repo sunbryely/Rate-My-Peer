@@ -252,7 +252,11 @@ public class RateActivity extends AppCompatActivity {
                             public void onResponse(JSONObject jsonObject) {
                                 Log.i("253: RESPONSE", "SUCCESS");
                                 commentSuccess = true;
-                                if (ratingSuccess) finish();
+                                if (ratingSuccess) {
+                                    finish();
+                                    Intent i = new Intent(RateActivity.this, ViewPeopleActivity.class);
+                                    startActivity(i);
+                                }
                             }
                         }, new Response.ErrorListener() {
                             @Override
@@ -281,7 +285,11 @@ public class RateActivity extends AppCompatActivity {
                             public void onResponse(JSONObject jsonObject) {
                                 Log.i("282: RESPONSE", "SUCCESS");
                                 ratingSuccess = true;
-                                if (commentSuccess) finish();
+                                if (commentSuccess) {
+                                    finish();
+                                    Intent i = new Intent(RateActivity.this, ViewPeopleActivity.class);
+                                    RateActivity.this.startActivity(i);
+                                }
                             }
                         }, new Response.ErrorListener() {
                             @Override
