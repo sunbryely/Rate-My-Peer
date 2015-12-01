@@ -175,32 +175,106 @@ public class RateActivity extends AppCompatActivity {
         //set listener for friend ratings bar
         friendRatingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             public void onRatingChanged(RatingBar friendRatingBar, float rating, boolean fromUser) {
-                friendValue.setText(String.valueOf(rating));
                 friendStars = friendRatingBar.getRating();
+                if(friendStars >= 0 && friendStars <= 1){
+                    friendValue.setText("8==D");
+                }
+                else if(friendStars > 1 && friendStars <= 2){
+                    friendValue.setText("Mehh");
+                }
+
+                else if(friendStars > 2 && friendStars <= 3){
+                    friendValue.setText("Oh. K.");
+                }
+
+                else if(friendStars > 3 && friendStars <= 4){
+                    friendValue.setText("Yee");
+                }
+
+                else{
+                    friendValue.setText("<33");
+                }
             }
         });
 
         //set listener for skills ratings bar
         skillsRatingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             public void onRatingChanged(RatingBar skillsRatingBar, float rating, boolean fromUser) {
-                skillsValue.setText(String.valueOf(rating));
                 skillsStars = skillsRatingBar.getRating();
+                if(skillsStars >= 0 && skillsStars <= 1){
+                    skillsValue.setText("8==D");
+                }
+
+                else if(skillsStars > 1 && skillsStars <= 2){
+                    skillsValue.setText("Mehh");
+                }
+
+                else if(skillsStars > 2 && skillsStars <= 3){
+                    skillsValue.setText("Oh. K.");
+                }
+
+                else if(skillsStars > 3 && skillsStars <= 4){
+                    skillsValue.setText("Yee");
+                }
+
+                else{
+                    skillsValue.setText("<33");
+                }
             }
         });
 
         //set listener for team ratings bar
         teamRatingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             public void onRatingChanged(RatingBar teamRatingBar, float rating, boolean fromUser) {
-                teamValue.setText(String.valueOf(rating));
                 teamStars = teamRatingBar.getRating();
+                if(teamStars >= 0 && teamStars <= 1){
+                    teamValue.setText("8==D");
+                }
+
+                else if(teamStars > 1 && teamStars <= 2){
+                    teamValue.setText("Mehh");
+                }
+
+                else if(teamStars > 2 && teamStars <= 3){
+                    teamValue.setText("Oh. K.");
+                }
+
+                else if(teamStars > 3 && teamStars <= 4){
+                    teamValue.setText("Yee");
+                }
+
+                else{
+                    teamValue.setText("<33");
+                }
+
+
             }
         });
 
         //set listener for friend ratings bar
         funRatingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             public void onRatingChanged(RatingBar funRatingBar, float rating, boolean fromUser) {
-                funValue.setText(String.valueOf(rating));
                 funStars = funRatingBar.getRating();
+                if(funStars >= 0 && funStars <= 1){
+                    funValue.setText("8==D");
+                }
+
+                else if(funStars > 1 && funStars <= 2){
+                    funValue.setText("Mehh");
+                }
+
+                else if(funStars > 2 && funStars <= 3){
+                    funValue.setText("Oh. K.");
+                }
+
+                else if(funStars > 3 && funStars <= 4){
+                    funValue.setText("Yee");
+                }
+
+                else{
+                    funValue.setText("<33");
+                }
+
             }
         });
     }

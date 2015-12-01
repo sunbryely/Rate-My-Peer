@@ -205,8 +205,11 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/submit_btn"
                 android:text="Submit"
+                android:textColor="#F1EFE2"
                 android:textSize="22dp"
                 android:layout_gravity="center"
+                android:background="@color/md_blue_400"
+                android:layout_marginTop="10dp"
                 />
         </LinearLayout>
     </android.support.v4.widget.DrawerLayout>
