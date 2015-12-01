@@ -223,6 +223,7 @@ public class RateActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
 
         PrimaryDrawerItem item1 = new PrimaryDrawerItem().withName("View People");
+        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withName("My Profile ");
 
         Drawer result = new DrawerBuilder()
                 .withActivity(this)
@@ -232,7 +233,7 @@ public class RateActivity extends AppCompatActivity {
                 .withActionBarDrawerToggleAnimated(true)
                 .addDrawerItems(
                         //pass your items here
-                        item1
+                        item1, item2
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
