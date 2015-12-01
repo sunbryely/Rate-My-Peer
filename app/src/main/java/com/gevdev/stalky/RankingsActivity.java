@@ -20,6 +20,7 @@ import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.google.android.gms.analytics.Tracker;
 import com.squareup.picasso.Picasso;
@@ -34,6 +35,8 @@ import bean.Comment;
 public class RankingsActivity extends AppCompatActivity {
 
     private Tracker mTracker;
+    private static final String TAG = "Rankings";
+
 
     public class userRanking {
         String username;
@@ -93,7 +96,7 @@ public class RankingsActivity extends AppCompatActivity {
 
             String userID = "100006683413828";
             String imageURL = "https://graph.facebook.com/" + userID + "/picture?type=large";
-            Picasso.with(this).load(imageURL).into(profilePic);
+            Picasso.with(RankingsActivity.this).load(imageURL).into(profilePic);
 
             userRanking ranking = rankList.get(arg);
 
@@ -123,11 +126,11 @@ public class RankingsActivity extends AppCompatActivity {
         final List<userRanking> rankList = new ArrayList<userRanking>();
 
         String URL = String.format("http://54.149.222.140/top");
-        JsonObjectRequest jsonRequest = new JsonObjectRequest
+        JsonArrayRequest jsonRequest = new JsonArrayRequest
                 (Request.Method.GET, URL, null, new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray jsonArray) {
-                        Log.e(TAG, "jsonObject = " + jsonArray.toString());
+                        Log.e(TAG, "jsonArray = " + jsonArray.toString());
                         updateUI(jsonArray, rankList);
                     }
                 }, new Response.ErrorListener() {
