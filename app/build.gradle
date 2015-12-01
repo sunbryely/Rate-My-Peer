@@ -34,8 +34,8 @@ dependencies {
         transitive = true
     }
     compile 'com.facebook.android:facebook-android-sdk:4.6.0'
-    compile 'com.android.support:recyclerview-v7:23.0.+'
-    compile 'com.android.support:cardview-v7:23.0.+'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'com.android.support:cardview-v7:23.1.1'
     compile project(':volley')
 
 

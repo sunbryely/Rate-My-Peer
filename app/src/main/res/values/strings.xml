@@ -14,4 +14,5 @@
     <string name="Comments">Comments</string>
     <string name="title_activity_view_people">ViewPeopleActivity</string>
     <string name="title_activity_rate">RateActivity</string>
+    <string name="title_activity_rankings">RankingsActivity</string>
 </resources>
