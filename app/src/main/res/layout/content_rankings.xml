@@ -13,9 +13,9 @@
     tools:context="com.gevdev.stalky.RankingsActivity"
     tools:showIn="@layout/rankings_layout">
 
-    <ListView
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/listview"></ListView>
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

@@ -2,6 +2,8 @@ package com.gevdev.stalky;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -30,14 +32,12 @@ import java.util.List;
 
 import Service.MemberServiceCenter;
 import adapter.RecyclerViewAdapter;
+import adapter.ViewPagerAdapter;
 
 public class RankingsActivity extends AppCompatActivity {
 
     private Tracker mTracker;
     private static final String TAG = "Rankings";
-    RecyclerView recyclerView;
-    RecyclerViewAdapter recyclerViewAdapter;
-
 
     public class userRanking {
         String username;
@@ -45,7 +45,7 @@ public class RankingsActivity extends AppCompatActivity {
         double rating;
     }
 
-    rankingsAdapter rankingsAdapter;
+    ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,62 +56,22 @@ public class RankingsActivity extends AppCompatActivity {
         mTracker = application.getDefaultTracker();
 
         setContentView(R.layout.rankings_layout);
+        setTitle("Top Five");
 
         // Initialize toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
-        rankingsAdapter = new rankingsAdapter();
-
+        setViewAdapter();
     }
 
-    public class rankingsAdapter extends BaseAdapter {
-        List<userRanking> rankList = getDataForListView();
+    private void setViewAdapter() {
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
+        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(viewPagerAdapter);
 
-        @Override
-        public int getCount() {
-            return rankList.size();
-        }
-
-        @Override
-        public userRanking getItem(int item) {
-            return rankList.get(item);
-        }
-
-        @Override
-        public long getItemId(int item) {
-            return item;
-        }
-
-        @Override
-        public View getView(int arg, View view, ViewGroup group) {
-            if (view == null) {
-                LayoutInflater inflater = (LayoutInflater) RankingsActivity.this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                view = inflater.inflate(R.layout.rankings_row, group, false);
-            }
-
-            // Connect with layout file
-            TextView username = (TextView) view.findViewById(R.id.name);
-            TextView rating = (TextView) view.findViewById(R.id.rating);
-            ImageView profilePic = (ImageView) view.findViewById(R.id.user_profile);
-
-            String userID = "100006683413828";
-            String imageURL = "https://graph.facebook.com/" + userID + "/picture?type=large";
-            Picasso.with(RankingsActivity.this).load(imageURL).into(profilePic);
-
-            userRanking ranking = rankList.get(arg);
-
-            username.setText("DICK");
-            rating.setText(String.valueOf("5.0"));
-
-            return view;
-        }
-
-        public userRanking getUserRanking(int position) {
-
-            return rankList.get(position);
-        }
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        tabLayout.setupWithViewPager(viewPager);
     }
 
 //    @Override
@@ -119,55 +79,6 @@ public class RankingsActivity extends AppCompatActivity {
 //        getMenuInflater().inflate(R.menu.rankings_layout, menu);
 //        return true;
 //    }
-
-    /**
-     * Handles logic for returning the data for users.
-     * @return
-     */
-    public List<userRanking> getDataForListView() {
-        final List<userRanking> rankList = new ArrayList<userRanking>();
-
-        String URL = String.format("http://54.149.222.140/top");
-        JsonArrayRequest jsonRequest = new JsonArrayRequest
-                (Request.Method.GET, URL, null, new Response.Listener<JSONArray>() {
-                    @Override
-                    public void onResponse(JSONArray jsonArray) {
-                        Log.e(TAG, "jsonArray = " + jsonArray.toString());
-                        updateUI(jsonArray, rankList);
-                    }
-                }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError volleyError) {
-                        volleyError.printStackTrace();
-                    }
-
-                });
-
-        jsonRequest.setRetryPolicy(new DefaultRetryPolicy(
-                50000,
-                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-
-        MemberServiceCenter.requestQueue.add(jsonRequest);
-
-        return rankList;
-    }
-
-    protected void updateUI(JSONArray array, List list) {
-        try {
-
-            for (int i = 0; i < array.length(); i++) {
-                userRanking ranking = new userRanking();
-                ranking.username = array.getJSONObject(i).getString("name");
-                ranking.rating = array.getJSONObject(i).getDouble("avg");
-                ranking.facebook_id = array.getJSONObject(i).getString("facebook_id");
-                list.add(i, array.getJSONObject(i));
-            }
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-    }
 
     @Override
     public void onResume() {
