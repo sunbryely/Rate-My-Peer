@@ -15,4 +15,8 @@
     <string name="title_activity_view_people">ViewPeopleActivity</string>
     <string name="title_activity_rate">RateActivity</string>
     <string name="title_activity_rankings">RankingsActivity</string>
+    <string name="leaveRating">Leave a Rating!</string>
+    <string name="commentHint">Tap here to comment!</string>
+    <string name="submitButton">Submit</string>
+    <string name="title_activity_rank">RankActivity</string>
 </resources>

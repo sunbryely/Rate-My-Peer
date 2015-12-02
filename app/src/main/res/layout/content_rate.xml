@@ -24,7 +24,7 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Leave a Rating!"
+                android:text="@string/leaveRating"
                 android:textSize="30dp"
                 android:gravity="top"
                 android:textColor="@color/md_blue_400" />
@@ -41,7 +41,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Friendliness"
+                android:text="@string/Friendliness"
                 android:textSize="22dp"
                 android:layout_marginTop="5dp"
                 android:id="@+id/friendliness"
@@ -76,7 +76,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Skills"
+                android:text="@string/Skills"
                 android:textSize="22dp"
                 android:id="@+id/skills"
                 />
@@ -110,7 +110,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Teamwork"
+                android:text="@string/Teamwork"
                 android:textSize="22dp"
                 android:id="@+id/teamwork"
                 />
@@ -144,7 +144,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fun Factor"
+                android:text="@string/FunFactor"
                 android:textSize="22dp"
                 android:id="@+id/funfactor"
                 />
@@ -191,6 +191,7 @@
 
                 <EditText
                     android:id="@+id/editText"
+                    android:hint="@string/commentHint"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/md_blue_grey_100">
@@ -204,7 +205,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/submit_btn"
-                android:text="Submit"
                 android:textColor="#F1EFE2"
                 android:textSize="22dp"
                 android:layout_gravity="center"

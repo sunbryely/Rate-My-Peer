@@ -1,41 +1,42 @@
 package com.gevdev.stalky;
 
-import java.util.List;
-import java.util.ArrayList;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.widget.BaseAdapter;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-import android.view.Menu;
+import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.JsonObjectRequest;
+import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import Service.MemberServiceCenter;
-import bean.Comment;
+import adapter.RecyclerViewAdapter;
 
 public class RankingsActivity extends AppCompatActivity {
 
     private Tracker mTracker;
     private static final String TAG = "Rankings";
+    RecyclerView recyclerView;
+    RecyclerViewAdapter recyclerViewAdapter;
 
 
     public class userRanking {
@@ -59,6 +60,7 @@ public class RankingsActivity extends AppCompatActivity {
         // Initialize toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
 
         rankingsAdapter = new rankingsAdapter();
 
@@ -100,8 +102,8 @@ public class RankingsActivity extends AppCompatActivity {
 
             userRanking ranking = rankList.get(arg);
 
-            username.setText(ranking.username);
-            rating.setText(String.valueOf(ranking.rating));
+            username.setText("DICK");
+            rating.setText(String.valueOf("5.0"));
 
             return view;
         }
@@ -148,7 +150,6 @@ public class RankingsActivity extends AppCompatActivity {
 
         MemberServiceCenter.requestQueue.add(jsonRequest);
 
-
         return rankList;
     }
 
@@ -166,7 +167,32 @@ public class RankingsActivity extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        String name = "Ranking Screen";
+
+        mTracker.setScreenName(name);
+        mTracker.send(new HitBuilders.ScreenViewBuilder().build());
+        mTracker.send(new HitBuilders.EventBuilder()
+                .setCategory("Action")
+                .setAction("App Resumed on page: " + name)
+                .build());
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        String name = "Ranking Screen";
+
+        mTracker.send(new HitBuilders.EventBuilder()
+                .setCategory("Action")
+                .setAction("App Paused on: " + name)
+                .build());
 
     }
 

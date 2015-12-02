@@ -12,7 +12,6 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -28,9 +27,7 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/app_id" />
 
-     <!--
-
-        -->
+        <!--  -->
 
         <activity
             android:name="com.facebook.FacebookActivity"
@@ -47,7 +44,12 @@
         <activity
             android:name=".RankingsActivity"
             android:label="@string/title_activity_rankings"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="cecbddb257a7fd77c502169b168b68d95e7bf8a4" />
+
     </application>
 
 </manifest>

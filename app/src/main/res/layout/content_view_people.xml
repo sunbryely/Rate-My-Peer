@@ -18,8 +18,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/border">
+            android:orientation="horizontal" >
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
@@ -180,6 +179,8 @@
                 android:layout_gravity="center_horizontal"
                 android:isIndicator="true"/>
         </LinearLayout>
+
+
 
         <TextView
             android:layout_width="match_parent"

@@ -104,7 +104,7 @@ public class ViewPeopleActivity extends AppCompatActivity {
         setContentView(R.layout.user_profile_layout);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("My Profile");
+        getSupportActionBar().setTitle(MainActivity.userName+"'s profile");
 
 
         AnalyticsApplication application = (AnalyticsApplication) getApplication();
@@ -129,14 +129,7 @@ public class ViewPeopleActivity extends AppCompatActivity {
         recyclerView.setAdapter(recyclerViewAdapter);
 
 
-        rateBtn = (Button) findViewById(R.id.rate_btn);
 
-        rateBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivityForResult(new Intent(ViewPeopleActivity.this, RateActivity.class), 1);
-            }
-        });
 
 
         //get searchedId
@@ -152,6 +145,15 @@ public class ViewPeopleActivity extends AppCompatActivity {
         System.err.println("MY ID IS: " + MainActivity.myID);
         System.err.println("MY Name is: " + MainActivity.userName);
         Picasso.with(this).load(imageURL).into(profileImage);
+
+        rateBtn = (Button) findViewById(R.id.rate_btn);
+
+        rateBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivityForResult(new Intent(ViewPeopleActivity.this, RateActivity.class), 1);
+            }
+        });
 
         //String URL= String.format("54.149.222.140/users/%s", searched_id);
         String URL = String.format("http://54.149.222.140/users/%s", userID);
@@ -216,7 +218,6 @@ public class ViewPeopleActivity extends AppCompatActivity {
                 commentsList.add(cur);
 
             }
-            System.out.println("size " + commentsList.size());
             recyclerViewAdapter.setItems(commentsList);
 
         } catch (JSONException e) {
@@ -235,6 +236,7 @@ public class ViewPeopleActivity extends AppCompatActivity {
         searchView.setSuggestionsAdapter(mAdapter);
 
         PrimaryDrawerItem item1 = new PrimaryDrawerItem().withName("My Profile");
+        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withName("Top Five");
 
         Drawer result = new DrawerBuilder()
                 .withActivity(this)
@@ -244,21 +246,27 @@ public class ViewPeopleActivity extends AppCompatActivity {
                 .withActionBarDrawerToggleAnimated(true)
                 .addDrawerItems(
                         //pass your items here
-                        item1
+                        item1,
+                        item2
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         // do something with the clicked item :D
 
+                        if(position == 0) {
                             updateProfile(MainActivity.userName);
                             mTracker.send(new HitBuilders.EventBuilder()
                                     .setCategory("SideMenu")
                                     .setAction("View My Profile Clicked from SideMenu")
                                     .build());
+                        }
+                        else if(position == 1) {
+                            Intent i = new Intent(ViewPeopleActivity.this, RankingsActivity.class);
+                            ViewPeopleActivity.this.startActivity(i);
+                        }
 
-
-                        return true;
+                        return false;
                     }
                 })
                 .build();
@@ -434,4 +442,5 @@ public class ViewPeopleActivity extends AppCompatActivity {
         String suggest1 = cursor.getString(cursor.getColumnIndex("names"));
         return suggest1;
     }
+
 }
