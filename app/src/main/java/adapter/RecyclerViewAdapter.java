@@ -61,7 +61,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         Picasso.with(context).load(imageURL).into(holder.image);
 
         //TODO get the name of user
-        String nameURL = "https://graph.facebook.com/" + cur.user_id_from;
+        holder.name.setText(cur.commenter);
+//        String nameURL = "https://graph.facebook.com/" + cur.user_id_from;
 //        globalHolder = holder;
 //
 //        JsonObjectRequest jsonRequest = new JsonObjectRequest

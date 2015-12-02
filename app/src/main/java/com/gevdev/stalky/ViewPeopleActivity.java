@@ -215,6 +215,7 @@ public class ViewPeopleActivity extends AppCompatActivity {
                 if (cur.comment.equals("")) continue;
                 cur.user_id_from = commentsArray.getJSONObject(i).getString("user_id_from");
                 cur.updated_at = commentsArray.getJSONObject(i).getString("updated_at");
+                cur.commenter = commentsArray.getJSONObject(i).getString("commenter");
                 commentsList.add(cur);
 
             }
