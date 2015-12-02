@@ -95,15 +95,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.updateAt.setText(cur.updated_at);
         holder.comment.setText(cur.comment);
 
-//        final int curPosition = position;
-//        holder.itemView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(context, ViewPeopleActivity.class);
-//                intent.putExtra("item", items.get(curPosition));
-//                context.startActivity(intent);
-//            }
-//        });
+        final String goTo = cur.user_id_from;
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ViewPeopleActivity.viewID = goTo;
+                context.startActivity(new Intent(context, ViewPeopleActivity.class));
+            }
+        });
     }
 
     @Override
