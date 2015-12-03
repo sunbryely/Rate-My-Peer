@@ -41,7 +41,7 @@ public class TopSkill extends Fragment{
         RecyclerView rankingView = (RecyclerView) view.findViewById(R.id.rankingView);
         rankingView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
 
-        rankingViewAdapter = new RankingViewAdapter(this.getActivity());
+        rankingViewAdapter = new RankingViewAdapter(this.getActivity(), 2);
         rankingView.setAdapter(rankingViewAdapter);
 
         getData();

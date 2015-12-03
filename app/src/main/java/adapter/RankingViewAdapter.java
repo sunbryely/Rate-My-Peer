@@ -27,11 +27,13 @@ public class RankingViewAdapter extends RecyclerView.Adapter<RankingViewAdapter.
     private final Context context;
     private final LayoutInflater layoutInflater;
     private List<UserRanking> items;
+    private int type;
 
-    public RankingViewAdapter(Context context) {
+    public RankingViewAdapter(Context context, int type) {
         this.context = context;
         layoutInflater = LayoutInflater.from(context);
         this.items = new ArrayList<>();
+        this.type = type;
     }
 
     public void setItems(List<UserRanking> items) {
@@ -41,6 +43,18 @@ public class RankingViewAdapter extends RecyclerView.Adapter<RankingViewAdapter.
 
     @Override
     public TextViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        switch (type) {
+            case 0:
+                return new TextViewHolder(layoutInflater.inflate(R.layout.list_ranking_avg, parent, false));
+            case 1:
+                return new TextViewHolder(layoutInflater.inflate(R.layout.list_ranking_friend, parent, false));
+            case 2:
+                return new TextViewHolder(layoutInflater.inflate(R.layout.list_ranking_skill, parent, false));
+            case 3:
+                return new TextViewHolder(layoutInflater.inflate(R.layout.list_ranking_teamwork, parent, false));
+            case 4:
+                return new TextViewHolder(layoutInflater.inflate(R.layout.list_ranking_fun, parent, false));
+        }
         return new TextViewHolder(layoutInflater.inflate(R.layout.list_ranking_avg, parent, false));
     }
 

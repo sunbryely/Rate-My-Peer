@@ -41,7 +41,7 @@ public class TopFriendliness extends Fragment{
         RecyclerView rankingView = (RecyclerView) view.findViewById(R.id.rankingView);
         rankingView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
 
-        rankingViewAdapter = new RankingViewAdapter(this.getActivity());
+        rankingViewAdapter = new RankingViewAdapter(this.getActivity(), 1);
         rankingView.setAdapter(rankingViewAdapter);
 
         getData();
