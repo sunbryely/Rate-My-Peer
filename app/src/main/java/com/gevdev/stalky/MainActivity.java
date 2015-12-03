@@ -16,15 +16,12 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.crashlytics.android.Crashlytics;
 import com.facebook.AccessToken;
 import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
-import com.facebook.GraphRequest;
-import com.facebook.GraphResponse;
 import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
@@ -32,11 +29,9 @@ import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import Service.MemberServiceCenter;
-import io.fabric.sdk.android.Fabric;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -50,15 +45,13 @@ public class MainActivity extends AppCompatActivity {
     private Tracker mTracker;
     private Toolbar toolbar;
     public static String userName;
+    public static String myName;
     public static String myID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Fabric.with(this, new Crashlytics());
 
-        // TODO: Move this to where you establish a user session
-        logUser();
 
 
         new MemberServiceCenter(this);
@@ -101,22 +94,6 @@ public class MainActivity extends AppCompatActivity {
 //                        );
 
                         //onLogin();
-
-                        GraphRequest request = GraphRequest.newGraphPathRequest(
-                                accessToken,
-                                "/me",
-                                new GraphRequest.Callback() {
-                                    @Override
-                                    public void onCompleted(GraphResponse response) {
-                                        try {
-                                            userName = response.getJSONObject().getString("name");
-                                        } catch (JSONException e) {
-                                            e.printStackTrace();
-                                        }
-                                    }
-                                });
-
-                        request.executeAsync();
 
                         myID = loginResult.getAccessToken().getUserId();
 
@@ -246,38 +223,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateWithToken(AccessToken currentAccessToken) {
         myID = currentAccessToken.getUserId();
-
-
-
+        accessToken = currentAccessToken;
 
         if(currentAccessToken != null)
         {
-            GraphRequest request = GraphRequest.newGraphPathRequest(
-                    currentAccessToken,
-                    "/me",
-                    new GraphRequest.Callback() {
-                        @Override
-                        public void onCompleted(GraphResponse response) {
-                            try {
-                                userName = response.getJSONObject().getString("name");
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                            // Insert your code here
-                        }
-                    });
 
-            request.executeAsync();
             onLogin();
         }
     }
-
-    private void logUser() {
-        // TODO: Use the current user's information
-        // You can call any combination of these three methods
-        Crashlytics.setUserName(myID);
-    }
-
-
-
 }

@@ -71,6 +71,9 @@ public class ViewPeopleActivity extends AppCompatActivity {
     private String searchedId;
     private static final String TAG = "ViewPeopleFragment";
     private Tracker mTracker;
+    private static final String myUserID = MainActivity.accessToken.getUserId();
+    private static String myUserName;
+    public static String rateName = "";
     Toolbar toolbar;
 
     public static String viewID = ""; //ID of the person who's profile we are looking at
@@ -91,8 +94,11 @@ public class ViewPeopleActivity extends AppCompatActivity {
 
 
         nameList = new ArrayList<>();
-        String[] myStrArr = {MainActivity.userName, MainActivity.myID};
-        nameList.add(myStrArr);
+        Bundle extras = getIntent().getExtras();
+        if(extras == null && viewID == "") {
+            Log.i("BOOGA", "DO I GO IN HERE");
+            getMyName(myUserID);
+        }
 
 
         String[] from = new String[]{"names"};
@@ -113,6 +119,11 @@ public class ViewPeopleActivity extends AppCompatActivity {
 
         AnalyticsApplication application = (AnalyticsApplication) getApplication();
         mTracker = application.getDefaultTracker();
+
+        //Set background transparency
+        scrollView = (ScrollView) findViewById(R.id.scrollView);
+        drawable = scrollView.getBackground();
+        drawable.setAlpha(50);
 
         //Set background transparency
         scrollView = (ScrollView) findViewById(R.id.scrollView);
@@ -148,11 +159,10 @@ public class ViewPeopleActivity extends AppCompatActivity {
         String searchedId = intent.getStringExtra("searchedId");
 
         String userID = "";
-        if(viewID.equals("")) userID = MainActivity.myID;
+        if (viewID.equals("")) userID = myUserID;
         else                  userID = viewID;
         String imageURL = "https://graph.facebook.com/" + userID + "/picture?type=large";
-        System.err.println("MY ID IS: " + MainActivity.myID);
-        System.err.println("MY Name is: " + MainActivity.userName);
+
         Picasso.with(this).load(imageURL).into(profileImage);
 
         rateBtn = (Button) findViewById(R.id.rate_btn);
@@ -171,6 +181,11 @@ public class ViewPeopleActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject jsonObject) {
                         Log.e(TAG, "jsonObject = " + jsonObject.toString());
+                        try {
+                            getSupportActionBar().setTitle(jsonObject.getString("name") + "'s Profile");
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                         updateUI(jsonObject);
                     }
                 }, new Response.ErrorListener() {
@@ -241,7 +256,7 @@ public class ViewPeopleActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_main, menu);
-        MenuItem searchItem = menu.findItem(R.id.action_search);
+        final MenuItem searchItem = menu.findItem(R.id.action_search);
         searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
         searchView.setSuggestionsAdapter(mAdapter);
 
@@ -265,7 +280,12 @@ public class ViewPeopleActivity extends AppCompatActivity {
                         // do something with the clicked item :D
 
                         if(position == 0) {
-                            updateProfile(MainActivity.userName);
+                            rateBtn.setVisibility(View.INVISIBLE);
+                            String[] myStrArr = {myUserName, myUserID};
+                            nameList.add(myStrArr);
+
+                            updateProfile(myUserName);
+
                             mTracker.send(new HitBuilders.EventBuilder()
                                     .setCategory("SideMenu")
                                     .setAction("View My Profile Clicked from SideMenu")
@@ -287,9 +307,12 @@ public class ViewPeopleActivity extends AppCompatActivity {
             public boolean onSuggestionClick(int position) {
                 String name = getSuggestion(position);
                 searchView.setQuery(name, true); // submit query now
-
+                onBackPressed();
+                MenuItemCompat.collapseActionView(searchItem);
                 updateProfile(name);
-                return true;
+                if(name.equals(myUserName)) rateBtn.setVisibility(View.INVISIBLE);
+                else                        rateBtn.setVisibility(View.VISIBLE);
+                return false;
             }
 
             @Override
@@ -406,10 +429,7 @@ public class ViewPeopleActivity extends AppCompatActivity {
 
     public void updateProfile(String name) {
 
-        System.err.println("Name is: " + name);
         Log.i("NAME", name);
-
-        getSupportActionBar().setTitle(name + "'s Profile");
 
         String userID = "";
 
@@ -420,6 +440,8 @@ public class ViewPeopleActivity extends AppCompatActivity {
                 break;
             }
         }
+
+        getSupportActionBar().setTitle(name + "'s Profile");
 
         String imageURL = "https://graph.facebook.com/" + userID + "/picture?type=large";
         Picasso.with(this).load(imageURL).into(profileImage);
@@ -452,5 +474,44 @@ public class ViewPeopleActivity extends AppCompatActivity {
         String suggest1 = cursor.getString(cursor.getColumnIndex("names"));
         return suggest1;
     }
+
+    private void getMyName(String myID) {
+        String URL = String.format("http://54.149.222.140/users/%s", myID);
+        JsonObjectRequest jsonRequest = new JsonObjectRequest
+                (Request.Method.GET, URL, null, new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject jsonObject) {
+                        Log.e(TAG, "jsonObject = " + jsonObject.toString());
+                        try {
+                            myUserName = jsonObject.getString("name");
+                            String[] myStrArr = {myUserName, myUserID};
+                            nameList.add(myStrArr);
+                            rateBtn.setVisibility(View.INVISIBLE);
+                            getSupportActionBar().setTitle(myUserName + "'s profile");
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError volleyError) {
+                        volleyError.printStackTrace();
+                    }
+                });
+        jsonRequest.setRetryPolicy(new DefaultRetryPolicy(
+                50000,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        MemberServiceCenter.requestQueue.add(jsonRequest);
+    }
+    @Override
+    public void onBackPressed() {
+        if (!searchView.isIconified()) {
+            searchView.setIconified(true);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
 
 }
