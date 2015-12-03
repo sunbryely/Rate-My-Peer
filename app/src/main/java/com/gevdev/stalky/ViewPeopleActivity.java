@@ -31,6 +31,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.facebook.FacebookSdk;
+import com.facebook.login.LoginManager;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 import com.mikepenz.materialdrawer.Drawer;
@@ -262,6 +264,7 @@ public class ViewPeopleActivity extends AppCompatActivity {
 
         PrimaryDrawerItem item1 = new PrimaryDrawerItem().withName("My Profile");
         PrimaryDrawerItem item2 = new PrimaryDrawerItem().withName("Top Five");
+        PrimaryDrawerItem item3 = new PrimaryDrawerItem().withName("Logout");
 
         Drawer result = new DrawerBuilder()
                 .withActivity(this)
@@ -272,7 +275,8 @@ public class ViewPeopleActivity extends AppCompatActivity {
                 .addDrawerItems(
                         //pass your items here
                         item1,
-                        item2
+                        item2,
+                        item3
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
@@ -293,6 +297,13 @@ public class ViewPeopleActivity extends AppCompatActivity {
                         }
                         else if(position == 1) {
                             Intent i = new Intent(ViewPeopleActivity.this, RankingsActivity.class);
+                            ViewPeopleActivity.this.startActivity(i);
+                        }
+                        else if(position == 2) {
+                            FacebookSdk.sdkInitialize(getApplicationContext());
+                            LoginManager.getInstance().logOut();
+                            finish();
+                            Intent i = new Intent(ViewPeopleActivity.this, MainActivity.class);
                             ViewPeopleActivity.this.startActivity(i);
                         }
 

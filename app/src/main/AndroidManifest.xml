@@ -34,10 +34,6 @@
             android:label="Stalky"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
-            android:name=".ViewPeopleActivity"
-            android:label="@string/title_activity_view_people"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".RateActivity"
             android:label="@string/title_activity_rate"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -45,6 +41,12 @@
             android:name=".RankingsActivity"
             android:label="@string/title_activity_rankings"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".ViewPeopleActivity"
+            android:label="@string/title_activity_rankings"
+            android:theme="@style/AppTheme.NoActionBar" />
+
 
         <meta-data
             android:name="io.fabric.ApiKey"

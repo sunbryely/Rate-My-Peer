@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
 
-
         new MemberServiceCenter(this);
 
         AnalyticsApplication application = (AnalyticsApplication) getApplication();
@@ -82,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
         info = (TextView) findViewById(R.id.info);
         loginButton = (LoginButton) findViewById(R.id.login_button);
+
 
         LoginManager.getInstance().registerCallback(callbackManager,
                 new FacebookCallback<LoginResult>() {
@@ -176,6 +176,9 @@ public class MainActivity extends AppCompatActivity {
                 .setCategory("Action")
                 .setAction("App Resumed on page: " + name)
                 .build());
+
+        if(accessToken != null)
+            onLogin();
     }
 
     @Override
@@ -222,13 +225,17 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void updateWithToken(AccessToken currentAccessToken) {
-        myID = currentAccessToken.getUserId();
+        //myID = currentAccessToken.getUserId();
         accessToken = currentAccessToken;
 
         if(currentAccessToken != null)
         {
-
             onLogin();
         }
+    }
+
+    public void FBLogout() {
+        LoginManager.getInstance().logOut();
+        finish();
     }
 }

@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,10 +17,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
-import com.mikepenz.materialdrawer.Drawer;
-import com.mikepenz.materialdrawer.DrawerBuilder;
-import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
-import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -390,39 +385,39 @@ public class RateActivity extends AppCompatActivity {
     }
 
     //Initialize Side Nav
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-
-        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withName("View People");
-        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withName("My Profile ");
-
-        Drawer result = new DrawerBuilder()
-                .withActivity(this)
-                .withToolbar(toolbar)
-                .withRootView(R.id.drawer_layout)
-                .withActionBarDrawerToggle(true)
-                .withActionBarDrawerToggleAnimated(true)
-                .addDrawerItems(
-                        //pass your items here
-                        item1, item2
-                )
-                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
-                    @Override
-                    public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
-                        // do something with the clicked item :D
-                        onLogin();
-                        mTracker.send(new HitBuilders.EventBuilder()
-                                .setCategory("SideMenu")
-                                .setAction("View People Clicked from SideMenu")
-                                .build());
-                        return true;
-                    }
-                })
-                .build();
-
-        return true;
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//
+//        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withName("View People");
+//        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withName("My Profile ");
+//
+//        Drawer result = new DrawerBuilder()
+//                .withActivity(this)
+//                .withToolbar(toolbar)
+//                .withRootView(R.id.drawer_layout)
+//                .withActionBarDrawerToggle(true)
+//                .withActionBarDrawerToggleAnimated(true)
+//                .addDrawerItems(
+//                        //pass your items here
+//                        item1, item2
+//                )
+//                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+//                    @Override
+//                    public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
+//                        // do something with the clicked item :D
+//                        onLogin();
+//                        mTracker.send(new HitBuilders.EventBuilder()
+//                                .setCategory("SideMenu")
+//                                .setAction("View People Clicked from SideMenu")
+//                                .build());
+//                        return true;
+//                    }
+//                })
+//                .build();
+//
+//        return true;
+//    }
 
     private void onLogin() {
         Intent intent = new Intent(this, ViewPeopleActivity.class);
