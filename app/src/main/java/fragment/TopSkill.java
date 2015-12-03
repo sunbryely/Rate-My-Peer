@@ -14,26 +14,22 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.gevdev.stalky.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import Service.MemberServiceCenter;
 import adapter.RankingViewAdapter;
-import adapter.RecyclerViewAdapter;
-import bean.Comment;
 import bean.UserRanking;
 
 /**
  * Created by kelsiedong on 12/2/15.
  */
-public class TopAvg extends Fragment{
+public class TopSkill extends Fragment{
 
     private List<UserRanking> userRankingList = new ArrayList<>();
     RankingViewAdapter rankingViewAdapter;
@@ -54,9 +50,7 @@ public class TopAvg extends Fragment{
     }
 
     private void getData() {
-        String[] typeStr = {"avg", "friendliness", "skill", "teamwork", "funfactor"};
-
-        String URL = String.format("http://54.149.222.140/top/%s", "avg");
+        String URL = String.format("http://54.149.222.140/top/%s", "skill");
         JsonArrayRequest jsonRequest = new JsonArrayRequest
                 (Request.Method.GET, URL, null, new Response.Listener<JSONArray>() {
                     @Override
