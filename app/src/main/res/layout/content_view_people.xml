@@ -47,6 +47,7 @@
                     android:textSize="22sp"
                     android:layout_marginLeft="20dp"
                     android:layout_gravity="center_horizontal"
+                    android:background="@drawable/border_filled"
                     />
             </LinearLayout>
         </LinearLayout>
