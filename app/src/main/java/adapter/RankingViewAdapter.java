@@ -17,7 +17,6 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
-import bean.Comment;
 import bean.UserRanking;
 
 /**
@@ -42,7 +41,7 @@ public class RankingViewAdapter extends RecyclerView.Adapter<RankingViewAdapter.
 
     @Override
     public TextViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new TextViewHolder(layoutInflater.inflate(R.layout.list_ranking, parent, false));
+        return new TextViewHolder(layoutInflater.inflate(R.layout.list_ranking_avg, parent, false));
     }
 
     @Override
