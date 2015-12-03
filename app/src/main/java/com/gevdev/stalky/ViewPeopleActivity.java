@@ -3,6 +3,7 @@ package com.gevdev.stalky;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.MatrixCursor;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.provider.BaseColumns;
 import android.support.v4.view.MenuItemCompat;
@@ -21,6 +22,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RatingBar;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.android.volley.DefaultRetryPolicy;
@@ -52,6 +54,8 @@ import bean.Comment;
 public class ViewPeopleActivity extends AppCompatActivity {
 
     private ImageView profileImage;
+    private ScrollView scrollView;
+    private Drawable drawable;
     private TextView name;
     private TextView friendliness;
     private TextView skills;
@@ -104,11 +108,16 @@ public class ViewPeopleActivity extends AppCompatActivity {
         setContentView(R.layout.user_profile_layout);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle(MainActivity.userName+"'s profile");
+        getSupportActionBar().setTitle(MainActivity.userName + "'s profile");
 
 
         AnalyticsApplication application = (AnalyticsApplication) getApplication();
         mTracker = application.getDefaultTracker();
+
+        //Set background transparency
+        scrollView = (ScrollView) findViewById(R.id.scrollView);
+        drawable = scrollView.getBackground();
+        drawable.setAlpha(50);
 
         //initView
         profileImage = (ImageView) findViewById(R.id.user_profile_image);
