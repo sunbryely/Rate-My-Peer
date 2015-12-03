@@ -27,20 +27,15 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         // Returns a new instance of the fragment
         switch (position) {
             case 0:
-                TopAvg.type = 0;
                 return new TopAvg();
             case 1:
-                TopAvg.type = 1;
-                return new TopAvg();
+                return new TopFriendliness();
             case 2:
-                TopAvg.type = 2;
-                return new TopAvg();
+                return new TopSkill();
             case 3:
-                TopAvg.type = 3;
-                return new TopAvg();
+                return new TopTeamwork();
             case 4:
-                TopAvg.type = 4;
-                return new TopAvg();
+                return new TopFunfactor();
         }
         return null;
     }
