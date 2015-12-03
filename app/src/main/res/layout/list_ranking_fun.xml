@@ -52,9 +52,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-10dp"
+
             android:text="@string/Friendliness"
-            android:textSize="22sp"
+            android:textSize="20sp"
             android:id="@+id/friendliness"
             />
 
@@ -68,7 +68,7 @@
                 android:layout_width="44dp"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:textSize="22sp"
+                android:textSize="20sp"
                 android:layout_marginRight="10dp"
                 android:id="@+id/friendliness_score"
                 android:layout_gravity="left" />
@@ -86,7 +86,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="-20dp"
             android:text="@string/Skills"
-            android:textSize="22sp"
+            android:textSize="20sp"
             android:id="@+id/skills"
             />
 
@@ -100,7 +100,7 @@
                 android:layout_width="44dp"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:textSize="22sp"
+                android:textSize="20sp"
                 android:layout_marginRight="10dp"
                 android:id="@+id/skills_score"
                 android:layout_gravity="left" />
@@ -118,7 +118,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="-20dp"
             android:text="@string/Teamwork"
-            android:textSize="22sp"
+            android:textSize="20sp"
             android:id="@+id/teamwork"
             />
 
@@ -132,7 +132,7 @@
                 android:layout_width="44dp"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:textSize="22sp"
+                android:textSize="20sp"
                 android:layout_marginRight="10dp"
                 android:id="@+id/teamwork_score"
                 android:layout_gravity="left" />
@@ -151,7 +151,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="-20dp"
             android:text="@string/FunFactor"
-            android:textSize="22sp"
+            android:textSize="20sp"
             android:id="@+id/funfactor"
             />
 
@@ -165,12 +165,12 @@
                 android:layout_width="44dp"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:textSize="22sp"
+                android:textSize="20sp"
                 android:layout_marginRight="10dp"
                 android:id="@+id/funfactor_score"
                 android:layout_gravity="left" />
 
-            <RatingBar
+            <RatingBar android:progressDrawable="@drawable/rating_star_highlight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/funfactor_rating"
@@ -184,7 +184,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="-20dp"
             android:text="Average"
-            android:textSize="22sp"
+            android:textSize="20sp"
             android:id="@+id/average"
             />
 
@@ -198,7 +198,7 @@
                 android:layout_width="44dp"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:textSize="22sp"
+                android:textSize="20sp"
                 android:layout_marginRight="10dp"
                 android:id="@+id/average_score"
                 android:layout_gravity="left" />
