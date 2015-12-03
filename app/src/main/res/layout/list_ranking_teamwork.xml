@@ -81,7 +81,7 @@
                 android:isIndicator="true"/>
         </LinearLayout>
 
-        <TextView
+        <TextView android:progressDrawable="@drawable/rating_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="-20dp"
@@ -203,7 +203,7 @@
                 android:id="@+id/average_score"
                 android:layout_gravity="left" />
 
-            <RatingBar
+            <RatingBar android:progressDrawable="@drawable/rating_bar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/average_rating"
